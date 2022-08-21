@@ -1,4 +1,4 @@
-const { Sides } = require('../model/Side');
+const Sides = require('../model/Side');
 
 const sidesData = [
     {

@@ -1,4 +1,4 @@
-const { SidesCategory } = require("../model/SidesCategory");
+const  SidesCategory = require("../model/SidesCategory");
 
 const categories = [
     {
