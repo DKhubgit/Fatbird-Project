@@ -4,15 +4,7 @@ body {
 
 .navbar-brand {
     position: relative !important;
-    left: 2% !important;
-}
-
-.navbar-toggler {
-    border-color: red;
-}
-
-.navbar-toggler-icon {
-    color: red;
+    left: 1% !important;
 }
 
 .nav-link {
@@ -22,9 +14,12 @@ body {
 
 .navbar .navbar-collapse {
     text-align: center;
+    font-size: 120%;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
-.navbar-nav .nav-link {
-    margin-right: 75px;
-    margin-left: 75px;
+.navbar-nav {
+    display: flex !important;
+    justify-content: space-between !important;
 }
