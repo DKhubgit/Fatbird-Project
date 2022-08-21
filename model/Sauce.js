@@ -1,23 +1,25 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class SidesCategory extends Model {};
+class Sauce extends Model {};
 
-SidesCategory.init({
+Sauce.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
     },
-    title: {
+    name: {
         type: DataTypes.STRING,
         allowNull: false,
-    }
+    },
 },
 {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
-    underscored: true,
-    modelName: 'sides-category',
-})
+    modelName: 'sauce',
+});
+
+module.exports = Sauce;

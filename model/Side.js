@@ -17,7 +17,7 @@ Sides.init({
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'sides-category',
+            model: 'category',
             key: id,
         }
     }
@@ -27,4 +27,6 @@ Sides.init({
     freezeTableName: true,
     underscored: true,
     modelName: 'sides',
-})
+});
+
+module.exports = Sides;
