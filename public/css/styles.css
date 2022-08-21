@@ -28,6 +28,11 @@ body {
     background-color: white;
 }
 
+#about-title {
+    font-size: 400%;
+    border-bottom: 1px solid black;
+}
+
 .display-1 {
     text-align: center;
     color: red;
@@ -65,6 +70,33 @@ body {
     font-weight: bold;
 }
 
+#about-container {
+    margin-bottom: 2%;
+}
+
+.about-text {
+    line-height: 1.6;
+}
+
+.about-sub-container {
+    margin-bottom: 5%;
+}
+
+.about-sub-container:last-child {
+    margin-bottom: 10%;
+    border-bottom: 1px solid black;
+
+}
+
+.about-title {
+    color: red;
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+    margin-bottom: 1%;
+    text-decoration: underline black;
+}
+
 
 @media screen and (max-width: 480px) {
     #mobile-hero-img {
@@ -91,6 +123,6 @@ body {
     }
 
     .info-container {
-        margin-bottom: 5%;
+        margin-bottom: 10%;
     }
 }
