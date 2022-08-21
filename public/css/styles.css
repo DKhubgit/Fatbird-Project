@@ -31,5 +31,10 @@ body {
 .display-1 {
     text-align: center;
     color: red;
-    border-bottom: 1px solid black;
+    font-weight: bolder;
+    padding-bottom: 5%;
+}
+
+#hero-img {
+    width: 100%;
 }
