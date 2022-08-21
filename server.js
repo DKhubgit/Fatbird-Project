@@ -12,6 +12,7 @@ const hbs = exphbs.create({});
 
 // Register the view engine
 app.engine('handlebars', hbs.engine);
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
 
 // middlewear
