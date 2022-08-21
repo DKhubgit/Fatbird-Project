@@ -18,7 +18,7 @@ Sides.init({
         allowNull: false,
         references: {
             model: 'category',
-            key: id,
+            key: 'id',
         }
     }
 },
