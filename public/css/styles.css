@@ -23,3 +23,13 @@ body {
     display: flex !important;
     justify-content: space-between !important;
 }
+
+.jumbotron {
+    background-color: white;
+}
+
+.display-1 {
+    text-align: center;
+    color: red;
+    border-bottom: 1px solid black;
+}
