@@ -19,18 +19,16 @@
 </head>
 
 <body>
-    {{!-- Header --}}
     {{!-- Navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-white bg-white">
-        <a class="navbar-brand" href="/">
-            <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t39.30808-6/277567420_354722513347170_2240661950691541473_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=qLzYhvIRn5cAX-o7MT7&_nc_ht=scontent-lax3-1.xx&oh=00_AT9FJLlUxNFYz1UBA1OP5RLg1aJB9Qq-6DA7HacRz62jUA&oe=63083DA0"
-                width="50" height="50" class="d-inline align-top" alt="Logo of Fat Birds Wing Bar" id="logo-img">
-        </a>
-    </nav>
+    {{> header}}
 
-    <div class="container">
-        {{{ body }}}
-    </div>
+    {{!-- HERE IS WHERE EXPRESSIONS WILL GO --}}
+    {{{ body }}}
+
+
+    {{!-- Footer goes here --}}
+    {{> footer}}
+
     {{!-- Scripts for Bootstrap --}}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
