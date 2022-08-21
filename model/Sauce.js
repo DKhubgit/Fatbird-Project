@@ -10,10 +10,18 @@ Sauce.init({
         primaryKey: true,
         autoIncrement: true,
     },
-    name: {
+    title: {
         type: DataTypes.STRING,
         allowNull: false,
     },
+    description: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+    },
+    spicy_level: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+    }
 },
 {
     sequelize,
