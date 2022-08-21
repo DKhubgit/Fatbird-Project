@@ -68,6 +68,6 @@ const sauces = [
     }
 ]
 
-const seedSauces = Sauce.bulkCreate(sauces);
+const seedSauces = () => Sauce.bulkCreate(sauces);
 
 module.exports = seedSauces;
