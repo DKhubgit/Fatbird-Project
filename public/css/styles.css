@@ -6,3 +6,25 @@ body {
     position: relative !important;
     left: 2% !important;
 }
+
+.navbar-toggler {
+    border-color: red;
+}
+
+.navbar-toggler-icon {
+    color: red;
+}
+
+.nav-link {
+    color: red !important;
+    font-weight: bold;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 75px;
+    margin-left: 75px;
+}
