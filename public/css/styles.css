@@ -48,6 +48,11 @@ body {
     display: block;
 }
 
+#hero-container-desktop {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
 #hero-img {
     width: 100%;
 }
@@ -124,5 +129,31 @@ body {
 
     .info-container {
         margin-bottom: 10%;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    #footer-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding-bottom: 5%;
+        text-align: center;
+    }
+
+    .info-container {
+        padding-top: 4%;
+    }
+
+    #hero-container-desktop {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #hero-container-desktop {
+        margin-left: -25px;
+        margin-right: -25px;
     }
 }
