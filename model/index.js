@@ -9,3 +9,5 @@ Sides.belongsTo(SidesCategory, {
 SidesCategory.hasMany(Sides, {
     foreignKey: 'cat_id',
 });
+
+module.exports = { Sides, SidesCategory };
