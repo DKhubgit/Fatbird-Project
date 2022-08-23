@@ -73,7 +73,7 @@ body {
     color: red;
     font-weight: bold;
     margin-bottom: 4%;
-    font-size: 200%;
+    font-size: 150%;
 }
 
 .info-text {
@@ -108,6 +108,10 @@ body {
 }
 
 /* Menu Styles - Main Menu page */
+#main-menu-container {
+    padding-bottom: 5%;
+}
+
 #wing-info-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -115,14 +119,27 @@ body {
     padding: 5%;
 }
 
-#wing-info-title {
-    font-size: 300%;
+.menu-title {
+    font-size: 350%;
     color: red;
     font-weight: bold;
     text-align: center;
     margin-top: 5%;
     text-decoration: underline black 2px;
     text-underline-offset: 10%;
+}
+
+.menu-link {
+    text-decoration: underline black 2px;
+    text-underline-offset: 10%;
+    color: red;
+
+}
+
+.menu-link:hover {
+    text-decoration: underline black 2px;
+    text-underline-offset: 10%;
+    color: red;
 }
 
 .wing-type {
@@ -175,6 +192,10 @@ body {
 
     .wing-size-container {
         padding: 5%;
+    }
+
+    .wing-type {
+        font-size: 200%;
     }
 
     .info-container {
