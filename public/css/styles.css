@@ -228,6 +228,14 @@ body {
     }
 }
 
+/* Specific media query for wing-info-container stacking */
+@media screen and (max-width: 660px) {
+    #wing-info-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
 /* Media Queries for Tablets */
 @media screen and (min-width: 1000px) {
     #hero-container-desktop {
