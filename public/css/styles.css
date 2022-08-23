@@ -159,6 +159,11 @@ body {
     bottom: 100px;
 }
 
+/* Styling for sauces menu */
+#sauces-container {
+    margin-bottom: 3%;
+}
+
 /* Media Queries for Phones */
 @media screen and (max-width: 480px) {
     #mobile-hero-img {
