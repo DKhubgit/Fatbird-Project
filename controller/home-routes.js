@@ -25,8 +25,8 @@ router.get('/menu/sauces', async (req, res) => {
         const sauces = dbSauceData.map((sauce) => {
             sauce.get({ plain: true })
         });
-        
-        res.render('sauces', {sauces});
+
+        res.render('sauces', { sauces });
     } catch (err) {
         res.status(500).json(err);
     }
