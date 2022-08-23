@@ -63,10 +63,8 @@ body {
 #footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 2%;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
     text-align: center;
-    border-top: 1px dashed black;
 }
 
 .info-title {
@@ -160,8 +158,42 @@ body {
 }
 
 /* Styling for sauces menu */
-#sauces-container {
+#sauces-menu-container {
     margin-bottom: 3%;
+}
+
+#sauces-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sauce-container {
+    padding: 5%;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    left: -500px;
+}
+
+.sauce-name {
+    font-size: 175%;
+    text-decoration: underline red 2px;
+    text-underline-offset: 10%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.spice-level-span {
+    color: red;
+    font-weight: bold;
+}
+
+/* Styling for back button in sauce */
+.backLink {
+    text-align: center;
+    position: relative;
+    bottom: 0%;
+    margin: auto;
 }
 
 /* Media Queries for Phones */
@@ -206,6 +238,11 @@ body {
     .info-container {
         margin-bottom: 10%;
     }
+
+    #sauces-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
 
 /* Media Queiries for slightly larger phones */
@@ -235,9 +272,13 @@ body {
         grid-template-rows: 1fr;
     }
 
-
     .wing-size-container {
         padding: 5%;
+    }
+
+    #sauces-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 }
 
