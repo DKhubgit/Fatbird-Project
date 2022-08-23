@@ -21,14 +21,10 @@ router.get('/menu', async (req, res) => {
 router.get('/menu/sauces', async (req, res) => {
     try {
         const dbSauceData = await Sauce.findAll();
-
-        console.log(dbSauceData);
-
         const sauces = dbSauceData.map((sauce) =>
             sauce.get({ plain: true })
         );
 
-        console.log(sauces);
 
         res.render('sauces', { sauces });
     } catch (err) {
