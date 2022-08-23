@@ -2,6 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Header styles */
 .navbar-brand {
     position: relative !important;
     left: 1% !important;
@@ -18,6 +19,7 @@ body {
     margin-left: 25px;
     margin-right: 25px;
 }
+
 
 .navbar-nav {
     display: flex !important;
@@ -57,6 +59,7 @@ body {
     width: 100%;
 }
 
+/* Footer styles */
 #footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -100,6 +103,34 @@ body {
     text-align: center;
     margin-bottom: 2%;
     text-decoration: underline black;
+}
+
+/* Menu Styles - Main Menu page */
+#wing-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    padding: 5%;
+}
+
+#wing-info-title {
+    font-size: 300%;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    text-decoration: underline black 2px;
+}
+
+.wing-type {
+    font-size: 200%;
+    text-decoration: underline red 2px;
+    padding-bottom: 1%;
+}
+
+.wing-info-description,
+.wing-info-ul {
+    font-weight: bold;
 }
 
 
