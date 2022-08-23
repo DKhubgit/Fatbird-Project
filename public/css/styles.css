@@ -133,7 +133,12 @@ body {
     font-weight: bold;
 }
 
+.wing-size-container {
+    position: relative;
+    bottom: 100px;
+}
 
+/* Media Queries for Phones */
 @media screen and (max-width: 480px) {
     #mobile-hero-img {
         display: block;
@@ -159,11 +164,21 @@ body {
         text-align: center;
     }
 
+    #wing-info-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .wing-size-container {
+        padding: 5%;
+    }
+
     .info-container {
         margin-bottom: 10%;
     }
 }
 
+/* Media Queiries for slightly larger phones */
 @media screen and (min-width: 200px) and (max-width: 800px) {
     #footer-container {
         display: grid;
@@ -183,6 +198,7 @@ body {
     }
 }
 
+/* Media Queries for Tablets */
 @media screen and (min-width: 1000px) {
     #hero-container-desktop {
         margin-left: -25px;

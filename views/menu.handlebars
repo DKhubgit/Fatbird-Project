@@ -1,5 +1,5 @@
 <div class="container-fluid" id="main-menu-container">
-    <h1 id="wing-info-title">Choose Your Wing Size!</h1>
+    <h1 id="wing-info-title">Choose A Size!</h1>
     <div id="wing-info-container">
         {{!-- Container for 6 wings --}}
         <div class="wing-size-container">
@@ -39,3 +39,9 @@
 
 {{!-- anime.js script --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: '.wing-size-container',
+        translateY: 100
+    });
+</script>
