@@ -30,4 +30,4 @@ Sauce.init({
     modelName: 'sauce',
 });
 
-module.exports = Sauce;
+module.exports = {Sauce};
