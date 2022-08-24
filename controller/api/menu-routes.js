@@ -10,7 +10,7 @@ router.get('/sauce', async (req, res) => {
     try {
         const dbSauceData = await Sauce.findAll();
 
-        res.json(dbSauceData);
+        res.status(200).json(dbSauceData);
     } catch (err) {
         res.status(500).json(err);
     }
