@@ -286,7 +286,6 @@ body {
     text-align: center;
     color: red;
     padding-top: 5%;
-    padding-bottom: 5%;
 }
 
 #sides-category-wrapper {
@@ -305,8 +304,8 @@ body {
 
 .category-title {
     font-size: 350%;
-    text-decoration: underline red 2px;
-    text-underline-offset: 10%;
+    /* text-decoration: underline red 2px;
+    text-underline-offset: 10%; */
     padding-bottom: 1%;
     text-align: center;
     position: relative;
@@ -315,12 +314,12 @@ body {
 
 .category-link {
     color: black;
-    text-decoration: 1px underline red;
+    /* text-decoration: 1px underline red; */
 }
 
 .category-link:hover {
     color: red;
-    text-decoration: 1px underline black;
+    /* text-decoration: 1px underline black; */
 }
 
 /* Media Queries for Phones */
