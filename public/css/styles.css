@@ -10,7 +10,8 @@ body {
 
 .nav-link {
     color: red !important;
-    font-weight: bold;
+    font-weight: bolder !important;
+    font-size: 110%;
 }
 
 .nav-link:hover {
@@ -43,6 +44,8 @@ body {
 
 .jumbotron {
     background-color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 /* Styles for dropdown menu on nav bar */
@@ -84,6 +87,8 @@ body {
 
 #hero-img {
     width: 100%;
+    padding-left: -8%;
+    padding-right: -8%
 }
 
 #hero-title {
@@ -171,7 +176,7 @@ body {
 }
 
 .menu-title {
-    font-size: 350%;
+    font-size: 400%;
     color: red;
     font-weight: bold;
     text-align: center;
@@ -195,6 +200,7 @@ body {
 
 .wing-type {
     font-size: 230%;
+    font-weight: bold;
     text-decoration: underline red 2px;
     text-underline-offset: 6%;
     padding-bottom: 1%;
@@ -203,6 +209,7 @@ body {
 .wing-info-description,
 .wing-info-ul {
     font-weight: bold;
+    font-size: 110%;
 }
 
 .wing-size-container {
@@ -229,7 +236,7 @@ body {
 }
 
 .sauce-name {
-    font-size: 175%;
+    font-size: 225%;
     text-decoration: underline red 2px;
     text-underline-offset: 10%;
     padding-bottom: 1%;
@@ -238,6 +245,7 @@ body {
 
 .sauce-description {
     line-height: 2.5rem;
+    font-size: 125%;
 }
 
 .spice-level-span {
@@ -286,6 +294,7 @@ body {
     text-align: center;
     color: red;
     padding-top: 5%;
+    font-weight: bolder;
 }
 
 #sides-category-wrapper {
@@ -310,6 +319,7 @@ body {
     text-align: center;
     position: relative;
     top: -300px;
+    font-weight: bold;
 }
 
 .category-link {
@@ -319,6 +329,7 @@ body {
 
 .category-link:hover {
     color: red;
+    text-decoration: none;
     /* text-decoration: 1px underline black; */
 }
 
@@ -328,13 +339,15 @@ body {
         display: block;
         height: 100%;
         width: 100%;
-        padding-right: 8%;
-        padding-left: 8%;
+        padding-right: -8%;
+        padding-left: -8%;
     }
 
+    /* 
     #hero-title {
         display: none;
-    }
+    } */
+
 
     #hero-img {
         display: none;
@@ -379,6 +392,10 @@ body {
     #sides-category-wrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    }
+
+    #sides-category-header {
+        margin-bottom: 5%;
     }
 }
 
@@ -449,6 +466,12 @@ body {
         width: 300px;
         object-fit: scale-down;
         margin: auto;
+    }
+
+    #hero-img {
+        width: 100%;
+        padding-left: -8%;
+        padding-right: -8%;
     }
 
 }
