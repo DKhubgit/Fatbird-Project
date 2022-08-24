@@ -82,6 +82,11 @@ body {
     width: 100%;
 }
 
+#hero-title {
+    position: relative;
+    top: -300px;
+}
+
 /* Footer styles */
 #footer-container {
     display: grid;
@@ -153,6 +158,7 @@ body {
     margin: auto;
     width: 350px;
     height: 350px;
+    max-height: 350px;
     background-size: contain;
     background-repeat: no-repeat;
     position: relative;
