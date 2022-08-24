@@ -298,12 +298,19 @@ body {
     margin-bottom: 15%;
 }
 
+.sides-category-container {
+    position: relative;
+    left: -400px
+}
+
 .category-title {
     font-size: 350%;
     text-decoration: underline red 2px;
     text-underline-offset: 10%;
     padding-bottom: 1%;
     text-align: center;
+    position: relative;
+    top: -300px;
 }
 
 .category-link {
