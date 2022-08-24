@@ -1,4 +1,5 @@
-const { Sauce } = require('../model/Sauce');
+
+const {Sauce} = require('../model/Sauce');
 
 const sauces = [
     {

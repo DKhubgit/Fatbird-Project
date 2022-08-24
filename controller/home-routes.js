@@ -46,7 +46,7 @@ router.get('/menu/sauces/:id', async (req, res) => {
 })
 
 // Render Sides Category page
-router.get('menu/sides', async (req, res) => {
+router.get('/menu/sides', async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll({
             include: [
@@ -90,8 +90,23 @@ router.get('/menu/sides/:id', async (req, res) => {
     }
 })
 
+// Render all Sides
+router.get('/menu/side', async (req, res) => {
+    try {
+        const dbSideData = await Sides.findAll();
+
+        const side = dbSideData.map((sides) => {
+            sides.get({ plain: true })
+        });
+
+        res.render('allSides', { side });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 // GET one Side
-router.get('./menu/side/:id', async (req, res) => {
+router.get('/menu/side/:id', async (req, res) => {
     try {
         const dbSideData = await Sides.findByPk(req.params.id);
 
