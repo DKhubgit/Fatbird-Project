@@ -260,7 +260,8 @@ body {
 
 #sauce-backlink {
     position: relative;
-    left: 35% margin: auto;
+    left: 35%;
+    margin: auto;
 }
 
 /* Styling for back button in sauce */
@@ -279,6 +280,8 @@ body {
 .backLink:hover {
     color: red;
 }
+
+/* STYLES FOR SIDES PAGE */
 
 
 /* Media Queries for Phones */
