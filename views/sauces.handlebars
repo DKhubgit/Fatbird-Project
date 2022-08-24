@@ -2,7 +2,7 @@
 <div id="sauces-container">
     {{#each sauces as |sauce|}}
     <div class="sauce-container">
-        <h2 class="sauce-name">{{sauce.title}}</h2>
+        <h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/{{sauce.id}}">{{sauce.title}}</a> </h2>
         <p class="sauce-description">{{sauce.description}}</p>
         {{#if sauce.spicy_level}}
         <p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">{{sauce.spicy_level}}</span></p>

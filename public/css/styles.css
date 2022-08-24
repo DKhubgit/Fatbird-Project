@@ -145,6 +145,7 @@ body {
     text-align: center;
     padding: 5%;
     padding-top: 2%;
+    line-height: 1.5rem;
 }
 
 /* Styles for menu images (images below sizes) */
@@ -231,9 +232,31 @@ body {
     text-align: center;
 }
 
+.sauce-description {
+    line-height: 2.5rem;
+}
+
 .spice-level-span {
     color: red;
     font-weight: bold;
+}
+
+/* Styles for sauce links */
+.sauce-link {
+    color: black;
+    text-decoration: underline red 2px;
+    text-underline-offset: 10%;
+}
+
+.sauce-link:hover {
+    color: black;
+    text-decoration: underline red 2px;
+    text-underline-offset: 10%;
+}
+
+#sauce-backlink {
+    position: relative;
+    left: 35% margin: auto;
 }
 
 /* Styling for back button in sauce */

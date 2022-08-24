@@ -1,0 +1,15 @@
+<div class="sauce-container">
+    <h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/{{sauce.id}}">{{sauce.title}}</a> </h2>
+    <p class="sauce-description">{{sauce.description}}</p>
+    {{#if sauce.spicy_level}}
+    <p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">{{sauce.spicy_level}}</span></p>
+    {{/if}}
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: ['.sauce-container', '.backLink'],
+        translateX: 500
+    })
+</script>
