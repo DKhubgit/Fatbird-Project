@@ -37,10 +37,12 @@
             </div>
         </div>
         <div class="container-fluid" id="menu-image-container">
-            <img src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                alt="Photo of fried chicken on banana leaves" class="menu-sizes-photo">
-            <img src="https://images.unsplash.com/photo-1553557202-e8e60357f061?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                alt="" class="menu-sizes-photo">
+            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+                )"></div>
+            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+                )"></div>
+            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
+                )"></div>
         </div>
     </div>
     <div id="sauces-menu-container">
@@ -55,7 +57,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
     anime({
-        targets: '.wing-size-container',
+        targets: ['.wing-size-container', '.menu-img'],
         translateY: 125
     });
 </script>

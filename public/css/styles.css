@@ -121,6 +121,7 @@ body {
     padding-bottom: 5%;
 }
 
+/* Styles for wing information (above images) */
 #wing-info-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -129,18 +130,28 @@ body {
     padding-top: 2%;
 }
 
+/* Styles for menu images (images below sizes) */
 #menu-image-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* Styles for chicken images*/
 .menu-sizes-photo {
     padding-top: 2%;
-    height: auto;
-    width: auto;
-    max-width: 500px;
-    max-height: 300px;
+    height: 400px;
+    width: 400px;
+    object-fit: scale-down;
     margin: auto;
+}
+
+.menu-img {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    position: relative;
+    bottom: 100px;
 }
 
 .menu-title {
@@ -278,6 +289,13 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+
+    #menu-image-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 2%;
+    }
 }
 
 /* Media Queiries for slightly larger phones */
@@ -298,6 +316,13 @@ body {
         margin-left: -20px;
         margin-right: -20px;
     }
+
+    #menu-image-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 2%;
+    }
 }
 
 /* Specific media query for wing-info-container stacking */
@@ -315,6 +340,8 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+
+
 }
 
 /* Media Queries for Tablets */
@@ -322,6 +349,14 @@ body {
     #hero-container-desktop {
         margin-left: -25px;
         margin-right: -25px;
+    }
+
+    .menu-sizes-photo {
+        padding-top: 2%;
+        height: 300px;
+        width: 300px;
+        object-fit: scale-down;
+        margin: auto;
     }
 
 }
