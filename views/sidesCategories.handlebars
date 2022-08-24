@@ -1,3 +1,13 @@
 <div id="sides-container">
-    <h1 class="display-1">TEST</h1>
+    <h1 class="display-4" id="sides-category-header">Select From Our Sides!</h1>
+    <div id="sides-category-wrapper">
+        {{#each sidesCategories as |category|}}
+        <div class="container-fluid" id="sides-category-container">
+            <h2 class="category-title"><a class='category-link'
+                    href="/menu/sides/{{category.id}}">{{category.title}}</a>
+            </h2>
+        </div>
+        {{/each}}
+    </div>
+
 </div>

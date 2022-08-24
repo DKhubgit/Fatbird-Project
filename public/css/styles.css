@@ -281,8 +281,40 @@ body {
     color: red;
 }
 
-/* STYLES FOR SIDES PAGE */
+/* STYLES FOR SIDES CATEGORY PAGE */
+#sides-category-header {
+    text-align: center;
+    color: red;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 
+#sides-category-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 25%;
+    padding: 5%;
+    margin-bottom: 15%;
+}
+
+.category-title {
+    font-size: 350%;
+    text-decoration: underline red 2px;
+    text-underline-offset: 10%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.category-link {
+    color: black;
+    text-decoration: 1px underline red;
+}
+
+.category-link:hover {
+    color: red;
+    text-decoration: 1px underline black;
+}
 
 /* Media Queries for Phones */
 @media screen and (max-width: 480px) {
@@ -337,6 +369,11 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+
+    #sides-category-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
 
 /* Media Queiries for slightly larger phones */
@@ -363,6 +400,11 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+
+    #sides-category-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
 
 /* Specific media query for wing-info-container stacking */
@@ -381,6 +423,10 @@ body {
         grid-template-rows: 1fr;
     }
 
+    #sides-category-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 
 }
 
