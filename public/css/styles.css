@@ -40,6 +40,18 @@ body {
     background-color: white;
 }
 
+/* Styles for dropdown menu on nav bar */
+.dropdown-item {
+    font-weight: bold;
+    color: red;
+    border: none;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    color: red;
+}
+
 #about-title {
     font-size: 400%;
     border-bottom: 1px solid black;
@@ -233,6 +245,7 @@ body {
 .backLink:hover {
     color: red;
 }
+
 
 /* Media Queries for Phones */
 @media screen and (max-width: 480px) {
