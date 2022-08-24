@@ -5,6 +5,17 @@ const { SidesCategory, Sides } = require('../../model');
 
 // default route for all below is /api/menu
 
+// Current Sauces
+router.get('/sauce', async (req, res) => {
+    try {
+        const dbSauceData = await Sauce.findAll();
+
+        res.json(dbSauceData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 // Create Sauce
 router.post('/sauce', async (req, res) => {
     try {
@@ -36,6 +47,25 @@ router.put('/sauce/:id', async (req, res) => {
         );
 
         res.status(200).json(sauce);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+// Current Side Categories
+
+router.get('/sidesCategory', async (req, res) => {
+    try {
+        const dbSideCategoryData = await SidesCategory.findAll({
+            include: [
+                {
+                    model: Sides,
+                    attributes: ['title'],
+                },
+            ],
+        });
+
+        res.json(dbSideCategoryData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -73,6 +103,17 @@ router.put('/sidesCategory/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// Current Sides
+router.get('/side', async (req, res) => {
+    try {
+        const dbSideData = await Sides.findAll();
+
+        res.json(dbSideData);
+    } catch (err) {
+        res.json(err);
+    }
+})
 
 // Create a Side
 router.post('/side', async (req, res) => {
