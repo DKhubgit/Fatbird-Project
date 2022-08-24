@@ -20,6 +20,17 @@ body {
     margin-right: 25px;
 }
 
+#brand-title {
+    display: inline;
+    color: red;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+    left: 15px;
+    font-size: 150%;
+    text-align: center;
+}
+
 
 .navbar-nav {
     display: flex !important;
