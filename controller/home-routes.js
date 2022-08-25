@@ -57,9 +57,9 @@ router.get('/menu/sides', async (req, res) => {
             ],
         });
 
-        const sidesCategories = dbSideCategoryData.map((category) => {
+        const sidesCategories = dbSideCategoryData.map((category) =>
             category.get({ plain: true })
-        });
+        );
 
         res.render('sidesCategories', { sidesCategories });
     } catch (err) {

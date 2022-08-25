@@ -1,0 +1,24 @@
+<div id="sides-container">
+    <h1 class="display-4" id="sides-category-header">Select From Our Sides!</h1>
+    <div id="sides-category-wrapper">
+        {{#each sidesCategories as |category|}}
+        <div class="container-fluid sides-category-container">
+            <h2 class="category-title"><a class='category-link'
+                    href="/menu/sides/{{category.id}}">{{category.title}}</a>
+            </h2>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: '.sides-category-container',
+        translateX: 400,
+        delay: anime.stagger(200, { start: 500 })
+    });
+    anime({
+        targets: '.category-title',
+        translateY: 300
+    })
+</script>
