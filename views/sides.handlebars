@@ -1,12 +1,21 @@
 {{!-- This template displays an Individual Side Category --}}
 <div class="container-fluid" id="side-container">
     <h2 class="display-4" id="side-title">{{sideCategory.title}}</h2>
+    <h3 id="side-select-text">We offer the following choices for {{sideCategory.title}}!</h3>
     <div id="side-items-container">
         {{#each sideCategory.sides as |side|}}
         <div class="side-item">
-            <h3 class="side-item-title"> <a href="/menu/side/{{side.id}}">{{side.title}}</a></h3>
+            <h3 class="side-item-title"> <a class='side-item-link' href="/menu/side/{{side.id}}">{{side.title}}</a></h3>
         </div>
         {{/each}}
+        <a href="/menu/sides" id="sides-backlink">Back to Sides</a>
     </div>
-    <a href="/menu/sides" id="sides-backlink">Back to Sides</a>
+
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: ['.side-item-title', '#sides-backlink'],
+        translateY: 300
+    })
+</script>
