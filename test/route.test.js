@@ -80,6 +80,11 @@ describe('Sauce Routes', function() {
 
 // test route for side categories db
 describe('Side Categories Routes', function() {
+    const sidesCategoryData = {
+        title: "Nachos"
+    }
+
+    // test GET request for all Side Category
     test('responds to /api/menu/sidesCategory', async () => {
         const res = await request(app).get('/api/menu/sidesCategory');
         expect(res.header['content-type']).toBe('application/json; charset=utf-8');
@@ -87,6 +92,25 @@ describe('Side Categories Routes', function() {
         expect(res.body[1].title).toBe('Fat Fries');
         expect(res.body[1].sides[0].title).toBe('Mexi Cali');
     });
+
+    // test GET request for one Side Category
+    test('GET /api/menu/sidesCategory/:id', async () => {
+        const idCheck = 1;
+        const res = await request(app).get(`/api/menu/sidesCategory/${idCheck}`);
+        expect(res.header['content-type']).toBe('application/json; charset=utf-8');
+        expect(res.statusCode).toBe(200);
+        expect(res.body.title).toBe('Dips');
+        expect(res.body.sides[3].title).toBe('Fat Sauce');
+    });
+
+    //test POST request to create a Side Category
+    test('POST /api/menu/sidesCategory', async () => {
+        const res = await request(app).post('/api/menu/sidesCategory').send(sidesCategoryData);
+        const postId = res.body.id;
+        expect(res.header['content-type']).toBe('application/json; charset=utf-8');
+        expect(res.statusCode).toBe(200);
+        await request(app).delete(`/api/menu/sidesCategory/${postId}`);
+    })
 });
 
 // test route for side db
