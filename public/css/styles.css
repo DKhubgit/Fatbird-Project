@@ -333,6 +333,27 @@ body {
     /* text-decoration: 1px underline black; */
 }
 
+/* STYLES FOR INDIVIDUAL SIDES PAGE */
+#side-title {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 600%;
+    color: red;
+    text-decoration: underline black 4px;
+    text-underline-offset: 20%;
+}
+
+#sides-items-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#sides-backlink {
+    text-align: center;
+    margin: auto;
+}
+
 /* Media Queries for Phones */
 @media screen and (max-width: 480px) {
     #mobile-hero-img {
