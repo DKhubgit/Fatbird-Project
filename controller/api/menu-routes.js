@@ -16,6 +16,17 @@ router.get('/sauce', async (req, res) => {
     }
 })
 
+// Get one Sauce
+router.get('/sauce/:id', async (req, res) => {
+    try {
+        const dbSauceData = await Sauce.findByPk(req.params.id);
+
+        res.status(200).json(dbSauceData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 // Create Sauce
 router.post('/sauce', async (req, res) => {
     try {
@@ -52,8 +63,25 @@ router.put('/sauce/:id', async (req, res) => {
     }
 })
 
-// Current Side Categories
+// Delete a sauce
+router.delete('/sauce/:id', async (req, res) => {
+    try {
+        const sauceData = await Sauce.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+        if (!sauceData) {
+            res.status(404).json({ message: 'No sauce found with that id!' });
+            return;
+        }
+        res.status(200).json(sauceData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
+// Current Side Categories
 router.get('/sidesCategory', async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll({
@@ -65,7 +93,25 @@ router.get('/sidesCategory', async (req, res) => {
             ],
         });
 
-        res.json(dbSideCategoryData);
+        res.status(200).json(dbSideCategoryData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+// Get one Side Category
+router.get('/sidesCategory/:id', async (req, res) => {
+    try {
+        const dbSideCategoryData = await SidesCategory.findByPk(req.params.id, {
+            include: [
+                {
+                    model: Sides,
+                    attributes: ['title'],
+                },
+            ],
+        });
+
+        res.status(200).json(dbSideCategoryData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -103,6 +149,25 @@ router.put('/sidesCategory/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// Delete a Side Category
+router.delete('/sidesCategory/:id', async (req, res) => {
+    try {
+        const sideCategory = await SidesCategory.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+
+        if(!sideCategory) {
+            res.status(404).json({ message: "No side category found with that id!"})
+        }
+
+        res.status(200).json(sideCategory);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 // Current Sides
 router.get('/side', async (req, res) => {
