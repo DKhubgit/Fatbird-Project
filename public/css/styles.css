@@ -176,12 +176,13 @@ body {
 }
 
 .menu-title {
-    font-size: 500%;
+    font-size: 450%;
     color: red;
     font-weight: bold;
     text-align: center;
     margin-top: 5%;
     margin-bottom: 1%;
+    padding-bottom: 2%;
     text-decoration: underline black 2px;
     text-underline-offset: 10%;
 }
