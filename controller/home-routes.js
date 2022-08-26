@@ -118,4 +118,16 @@ router.get('/menu/side/:id', async (req, res) => {
     }
 })
 
+// render contact page
+router.get('/contact', async (req, res) => {
+    res.render('contact');
+})
+
+// render login page
+// not final route
+router.get('/login', async (req, res) => {
+    res.render('login');
+})
+
 module.exports = router;
+
