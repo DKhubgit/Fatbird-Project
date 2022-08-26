@@ -8,15 +8,14 @@ body {
     left: 1% !important;
 }
 
-
 .navbar {
-    background-color: #d8e2dc;
+    background-color: #c1121f;
 }
 
 .nav-link {
-    color: red !important;
+    color: white !important;
     font-weight: bolder !important;
-    font-size: 110%;
+    font-size: 130%;
 }
 
 .nav-link:hover {
@@ -33,7 +32,7 @@ body {
 
 #brand-title {
     display: inline;
-    color: red;
+    color: White;
     font-weight: bold;
     position: relative;
     top: 20px;
@@ -47,11 +46,7 @@ body {
     justify-content: space-between !important;
 }
 
-.jumbotron {
-    background-color: white;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+
 
 /* Styles for dropdown menu on nav bar */
 .dropdown-item {
@@ -80,15 +75,23 @@ body {
     display: block;
 }
 
+/* HOMEPAGE STYLES */
+.jumbotron {
+    background-color: white;
+    margin-bottom: 4%;
+    padding-bottom: 0;
+}
+
 #hero-container-desktop {
     margin-left: -15px;
     margin-right: -15px;
 }
 
-#hero-img {
+#hero-image-container {
     width: 100%;
-    padding-left: -8%;
-    padding-right: -8%
+    height: 700px;
+    background-image: url(https://s3-media0.fl.yelpcdn.com/bphoto/PClfDiHUgmuiJktJKekwqQ/o.jpg);
+    margin-bottom: 1%;
 }
 
 #hero-title {
@@ -96,16 +99,46 @@ body {
     top: -300px;
 }
 
+/* homepage socials area */
+#home-socials {
+    padding-top: 1%;
+    margin-bottom: 1%;
+}
+
+#socials-title {
+    text-align: center;
+    font-size: 300%;
+    font-weight: bold;
+    text-decoration: underline 3.5px red;
+    margin-bottom: 2%;
+}
+
+#home-social-media-list {
+    font-size: 375%;
+    text-align: center;
+}
+
+.social-li {
+    display: inline;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.social-link:hover {
+    text-decoration: none;
+}
+
 /* Footer Styles */
 #footer-container {
-    background-color: #d8e2dc;
+    background-color: #c1121f;
     text-align: center;
     padding-top: 3%;
     padding-bottom: 3%;
     margin-top: 1%;
     font-size: 150%;
+    font-weight: bold;
+    color: white;
 }
-
 
 /* Contact styles */
 #contact-container {
