@@ -97,7 +97,9 @@ body {
     grid-template-areas:
         "a a a a"
         "b b c c";
+    grid-gap: 2%;
     padding-bottom: 2%;
+    margin-bottom: 5%;
     text-align: center;
 }
 
@@ -188,7 +190,7 @@ body {
 #what-we-do-container,
 #goal-container {
     position: relative;
-    left: -2000px;
+    top: -300px;
 }
 
 #about-header {
