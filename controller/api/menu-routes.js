@@ -160,7 +160,8 @@ router.delete('/sidesCategory/:id', async (req, res) => {
         });
 
         if(!sideCategory) {
-            res.status(404).json({ message: "No side category found with that id!"})
+            res.status(404).json({ message: "No side category found with that id!"});
+            return;
         }
 
         res.status(200).json(sideCategory);
@@ -174,9 +175,20 @@ router.get('/side', async (req, res) => {
     try {
         const dbSideData = await Sides.findAll();
 
-        res.json(dbSideData);
+        res.status(200).json(dbSideData);
     } catch (err) {
-        res.json(err);
+        res.status(500).json(err);
+    }
+})
+
+// GET one Side 
+router.get('/side/:id', async (req, res) => {
+    try {
+        const dbSideData = await Sides.findByPk(req.params.id);
+
+        res.status(200).json(dbSideData);
+    } catch (err) {
+        res.status(500).json(err);
     }
 })
 
@@ -210,6 +222,24 @@ router.put('/side/:id', async (req, res) => {
         );
 
         res.status(200).json(side);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+// Delete a side
+router.delete('/side/:id', async (req, res) => {
+    try {
+        const sideData = await Sides.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+        if (!sideData) {
+            res.status(404).json({ message: 'No side found with that id!' });
+            return;
+        }
+        res.status(200).json(sideData);
     } catch (err) {
         res.status(500).json(err);
     }
