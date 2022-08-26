@@ -91,27 +91,79 @@ body {
     top: -300px;
 }
 
-
-
-/* Footer styles */
-#footer-container {
+/* Contact styles */
+#contact-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "a a a a"
+        "b b c c";
+    grid-gap: 2%;
     padding-bottom: 2%;
+    margin-bottom: 5%;
     text-align: center;
+}
+
+#address-container {
+    grid-area: a;
+}
+
+#address-text {
+    line-height: 3rem;
+}
+
+#contact-info-container {
+    grid-area: b;
+}
+
+#business-hours-container {
+    grid-area: c;
+}
+
+.info-container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    position: relative;
+    top: -300px;
 }
 
 .info-title {
     color: red;
     font-weight: bold;
-    margin-bottom: 4%;
-    font-size: 150%;
+    margin-bottom: 3%;
+    font-size: 250%;
+    text-decoration: underline black 2px;
+    text-underline-offset: 10%;
 }
 
 .info-text {
     font-weight: bold;
+    font-size: 150%;
 }
 
+.contact-link {
+    color: black;
+}
+
+.contact-link:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/* Font styles for contact */
+.fa-yelp {
+    color: red !important;
+}
+
+.fa-instagram {
+    color: brown !important;
+    font-weight: bold;
+}
+
+.fa-square-facebook {
+    color: blue !important;
+}
+
+/* About Us Styles */
 #about-container {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -138,9 +190,8 @@ body {
 #what-we-do-container,
 #goal-container {
     position: relative;
-    left: -2000px;
+    top: -300px;
 }
-
 
 #about-header {
     font-size: 400%;
@@ -421,10 +472,12 @@ body {
         display: none;
     }
 
-    #footer-container {
+    #contact-container {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-areas:
+            "a a a a"
+            "b b b b"
+            "c c c c";
         padding-bottom: 5%;
         text-align: center;
     }
@@ -483,10 +536,12 @@ body {
 
 /* Media Queiries for slightly larger phones */
 @media screen and (min-width: 200px) and (max-width: 800px) {
-    #footer-container {
+    #contact-container {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-areas:
+            "a a a a"
+            "b b b b"
+            "c c c c";
         padding-bottom: 5%;
         text-align: center;
     }
@@ -580,6 +635,11 @@ body {
         width: 100%;
         padding-left: -8%;
         padding-right: -8%;
+    }
+
+    #location-map {
+        height: 400px;
+        width: 900px;
     }
 
 }
