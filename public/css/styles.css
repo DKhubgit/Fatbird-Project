@@ -105,6 +105,10 @@ body {
     grid-area: a;
 }
 
+#address-text {
+    line-height: 3rem;
+}
+
 #contact-info-container {
     grid-area: b;
 }
