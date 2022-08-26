@@ -176,6 +176,12 @@ body {
     grid-area: b;
 }
 
+#contact-info-container p {
+    text-align: left;
+    position: relative;
+    left: 30%;
+}
+
 #business-hours-container {
     grid-area: c;
 }
@@ -479,6 +485,7 @@ body {
 /* STYLES FOR INDIVIDUAL SIDES PAGE */
 #side-container {
     margin-bottom: 5%;
+    height: 100vh;
 }
 
 #side-title {
