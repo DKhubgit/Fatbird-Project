@@ -8,6 +8,11 @@ body {
     left: 1% !important;
 }
 
+
+.navbar {
+    background-color: #d8e2dc;
+}
+
 .nav-link {
     color: red !important;
     font-weight: bolder !important;
@@ -90,6 +95,17 @@ body {
     position: relative;
     top: -300px;
 }
+
+/* Footer Styles */
+#footer-container {
+    background-color: #d8e2dc;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    margin-top: 1%;
+    font-size: 150%;
+}
+
 
 /* Contact styles */
 #contact-container {
@@ -578,6 +594,7 @@ body {
     .menu-title {
         margin-bottom: 4%;
     }
+
 }
 
 /* Specific media query for wing-info-container stacking */
