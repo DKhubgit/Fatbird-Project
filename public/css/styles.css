@@ -60,11 +60,6 @@ body {
     color: black;
 }
 
-#about-title {
-    font-size: 400%;
-    border-bottom: 1px solid black;
-}
-
 .display-1 {
     text-align: center;
     color: red;
@@ -96,6 +91,8 @@ body {
     top: -300px;
 }
 
+
+
 /* Footer styles */
 #footer-container {
     display: grid;
@@ -116,11 +113,16 @@ body {
 }
 
 #about-container {
-    margin-bottom: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .about-text {
     line-height: 1.6;
+    padding: 2% 5%;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
 }
 
 .about-sub-container {
@@ -129,17 +131,32 @@ body {
 
 .about-sub-container:last-child {
     margin-bottom: 10%;
-    border-bottom: 1px solid black;
     padding-bottom: 5%;
+}
+
+#history-container,
+#what-we-do-container,
+#goal-container {
+    position: relative;
+    left: -2000px;
+}
+
+
+#about-header {
+    font-size: 400%;
+    text-decoration: underline black 2px;
+    text-underline-offset: 10%;
 }
 
 .about-title {
     color: red;
     font-weight: bold;
-    font-size: 200%;
+    font-size: 300%;
     text-align: center;
+    margin-top: 2%;
     margin-bottom: 2%;
-    text-decoration: underline black;
+    text-decoration: underline black 2px;
+    text-underline-offset: 10%;
 }
 
 /* Menu Styles - Main Menu page */
