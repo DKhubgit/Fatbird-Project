@@ -1,3 +1,12 @@
+:root {
+    --red-theme: #c1121f;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -9,7 +18,7 @@ body {
 }
 
 .navbar {
-    background-color: #c1121f;
+    background-color: var(--red-theme);
 }
 
 .nav-link {
@@ -110,6 +119,7 @@ body {
     font-size: 300%;
     font-weight: bold;
     text-decoration: underline 3.5px red;
+    text-underline-offset: 10%;
     margin-bottom: 2%;
 }
 
@@ -130,7 +140,7 @@ body {
 
 /* Footer Styles */
 #footer-container {
-    background-color: #c1121f;
+    background-color: var(--red-theme);
     text-align: center;
     padding-top: 3%;
     padding-bottom: 3%;
@@ -180,7 +190,7 @@ body {
     font-weight: bold;
     margin-bottom: 3%;
     font-size: 250%;
-    text-decoration: underline black 2px;
+    text-decoration: underline black 3px;
     text-underline-offset: 10%;
 }
 
@@ -354,6 +364,14 @@ body {
     left: -500px;
 }
 
+#single-sauce-container {
+    height: 100vh;
+}
+
+#single-side-container {
+    height: 100vh;
+}
+
 .sauce-name {
     font-size: 250%;
     text-decoration: underline red 2px;
@@ -409,6 +427,10 @@ body {
 }
 
 /* STYLES FOR SIDES CATEGORY PAGE */
+#sides-container {
+    height: 100vh;
+}
+
 #sides-category-header {
     text-align: center;
     color: red;
@@ -453,6 +475,10 @@ body {
 }
 
 /* STYLES FOR INDIVIDUAL SIDES PAGE */
+#side-container {
+    margin-bottom: 5%;
+}
+
 #side-title {
     text-align: center;
     margin-top: 2%;
@@ -466,7 +492,6 @@ body {
 #side-items-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
 }
 
 #side-select-text {
