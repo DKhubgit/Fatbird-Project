@@ -179,7 +179,7 @@ body {
 #contact-info-container p {
     text-align: left;
     position: relative;
-    left: 30%;
+    left: 25%;
 }
 
 #business-hours-container {
@@ -596,6 +596,7 @@ body {
     #sides-category-wrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        grid-gap: 10%;
     }
 
     #sides-category-header {
@@ -647,6 +648,7 @@ body {
     #sides-category-wrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        grid-gap: 10%;
     }
 
     #side-title {
@@ -683,6 +685,7 @@ body {
     #sides-category-wrapper {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        grid-gap: 10%;
     }
 
     #side-title {
