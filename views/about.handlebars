@@ -1,9 +1,9 @@
 <div class="container-fluid" id="about-container">
     <div class="jumbotron">
-        <h1 class="display-1" id="about-title">Who Are We?</h1>
+        <h1 class="display-1" id="about-header">Who Are We?</h1>
     </div>
     <div id="history-container" class="about-sub-container">
-        <h2 class="about-title">The History of Fat Birds</h2>
+        <h2 class="about-title">Our History</h2>
         <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque debitis ipsam et, deleniti
             ratione
             exercitationem ad quia consequatur, perferendis odio explicabo itaque nam eum id iste voluptate ex
@@ -42,5 +42,11 @@
             facere accusantium nobis. Ullam, voluptatibus.</p>
     </div>
 </div>
-
 {{> footer}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: ['#history-container', '#what-we-do-container', '#goal-container'],
+        translateX: 2000,
+    })
+</script>
