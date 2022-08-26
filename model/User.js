@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
+const bcrypt = require('bcrypt');
 
 class User extends Model {};
 
@@ -8,6 +9,7 @@ User.init({
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
+        primaryKey: true,
     },
     username: {
         type: DataTypes.STRING,
@@ -21,15 +23,11 @@ User.init({
         }
     },
     password: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
             notEmpty: true, //cannot be an empty string
             notNull: true, //cannot be null
-            isUppercase: true, //must have an uppercase letter
-            isLowercase: true, //must have a lower case letter
-            isInt: true,    //must have an integer
-            isIn: [['!','@','#','$','%','^','&','*','(',')']], //must have one of the following characters
             len: [8, 14], //allow length of password to be between 8 and 16 characters
         }
     },
@@ -39,9 +37,17 @@ User.init({
     }
 },
 {
+    hooks: {
+        async beforeCreate(user) {
+            user.password = await bcrypt.hash(user.password, 2);
+            return user;
+        },
+    },
     sequelize,
     freezeTableName: true,
     timestamps: false,
     underscored: true,
     modelName: 'user',
-})
+});
+
+module.exports = { User };
