@@ -1,10 +1,15 @@
 <div id="single-side-container">
-    <h2 class="side-item-title">{{side.title}}</h2>
+    <div class="single-side-wrapper">
+        <h2 class="side-item-title">{{side.title}}</h2>
+    </div>
+
+    <a href="/menu/sides/{{side.cat_id}}" id="single-side-back">Back</a>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
     anime({
-        targets: ['.side-item-title', '#sides-backlink'],
+        targets: ['.side-item-title'],
         translateY: 300
     })
 </script>
