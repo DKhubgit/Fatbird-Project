@@ -14,6 +14,14 @@ Sides.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
+    image: {
+        type: DataTypes.BLOB, //might be in a binary format
+        allowNull: false,
+    },
+    alt_image: {
+        type: DataTypes.TEXT, //text can be a long string as long as it's less than 65,535 bytes
+        allowNull: false,
+    },
     cat_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
