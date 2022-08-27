@@ -673,6 +673,10 @@ body {
         padding-bottom: 100px;
     }
 
+    #hero-title {
+        font-size: 400%;
+    }
+
     #menu-image-container {
         display: grid;
         grid-template-columns: 1fr;
