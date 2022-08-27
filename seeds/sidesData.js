@@ -42,7 +42,7 @@ const sidesData = [
         cat_id: 2,
     },
     {
-        title: 'Bacone & Cheese',
+        title: 'Bacon & Cheese',
         cat_id: 2,
     },
     {
