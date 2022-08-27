@@ -16,11 +16,11 @@ Sides.init({
     },
     image: {
         type: DataTypes.BLOB, //might be in a binary format
-        allowNull: false,
+        allowNull: true,
     },
     alt_image: {
         type: DataTypes.TEXT, //text can be a long string as long as it's less than 65,535 bytes
-        allowNull: false,
+        allowNull: true,
     },
     cat_id: {
         type: DataTypes.INTEGER,
