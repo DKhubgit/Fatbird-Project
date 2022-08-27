@@ -4,6 +4,9 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const express = require('express');
 const res = require('express/lib/response');
+const Handlebars = require('handlebars');
+const { Sauce } = require('../model/Sauce');
+const { SidesCategory, Sides } = require('../model');
 
 const app = new express();
 // Create handlebars.js engine object
@@ -246,4 +249,205 @@ describe('Render sauces', () => {
 </script>`
         )
     })
+    test('should return paragraph if spicy level is greater than 0', async () => {
+        const helper = `{{#if sauce.spicy_level}}<p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">{{sauce.spicy_level}}</span></p>{{/if}}`;
+        const dbSauceData = await Sauce.findByPk(6);
+        const sauce = dbSauceData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({sauce});
+        expect(result).toBe(
+`<p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">2</span></p>`
+            )
+    })
+    test('should return empty space if spicy level is 0', async () => {
+        const helper = `{{#if sauce.spicy_level}}<p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">{{sauce.spicy_level}}</span></p>{{/if}}`;
+        const dbSauceData = await Sauce.findByPk(2);
+        const sauce = dbSauceData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({sauce});
+        expect(result).toBe(``);
+    })
+    test('should return sauce id ans sauce description', async () => {
+        const helper = 
+`<h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/{{sauce.id}}">{{sauce.title}}</a> </h2>
+<p class="sauce-description">{{sauce.description}}</p>`
+        const dbSauceData = await Sauce.findByPk(6);
+        const sauce = dbSauceData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({sauce});
+        expect(result).toBe(
+`<h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/6">Mango Habanero</a> </h2>
+<p class="sauce-description">Sweet mangoes. Fiery habeneros!</p>`
+        )
+    })
 });
+
+describe('Render sauce', () => {
+    test('should render sauce', async () => {
+        const res = await request(app).get('/menu/sauces/4');
+        expect(res.statusCode).toBe(200);
+        expect(res.header['content-type']).toBe('text/html; charset=utf-8');
+        expect(res.text).toContain(
+`<div class="sauce-container">
+    <h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/4">Garlic Parm</a> </h2>
+    <p class="sauce-description">Hope you&#x27;re not on a date! Oodles of Garlic n Parm.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: ['.sauce-container', '.backLink'],
+        translateX: 500
+    })
+</script>`
+        )
+    })
+    test('should return with sauce id, title, and description', async () => {
+        const helper =
+`<h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/{{sauce.id}}">{{sauce.title}}</a> </h2>
+<p class="sauce-description">{{sauce.description}}</p>`
+        const dbSauceData = await Sauce.findByPk(1);
+        const sauce = dbSauceData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({sauce});
+        expect(result).toBe(
+`<h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/1">Aloha</a> </h2>
+<p class="sauce-description">Pineapple &amp; Teriyaki. Aloha from the islands!</p>`
+        )
+    })
+    test('should return paragraph if spicy_level is greater than 0', async () => {
+        const helper = 
+`{{#if sauce.spicy_level}}<p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">{{sauce.spicy_level}}</span></p>{{/if}}`
+        const dbSauceData = await Sauce.findByPk(10);
+        const sauce = dbSauceData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({sauce});
+        expect(result).toBe(
+`<p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">1</span></p>`  
+        );
+    })
+    test('should return empty space if spicy_level is 0', async () => {
+        const helper = 
+        `{{#if sauce.spicy_level}}<p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">{{sauce.spicy_level}}</span></p>{{/if}}`
+        const dbSauceData = await Sauce.findByPk(7);
+        const sauce = dbSauceData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({sauce});
+        expect(result).toBe(``);
+    })
+});
+
+describe('Render sidesCategories', () => {
+    test('should render sidesCategories', async () => {
+        const res = await request(app).get('/menu/sides');
+        expect(res.statusCode).toBe(200);
+        expect(res.header['content-type']).toBe('text/html; charset=utf-8');
+        expect(res.text).toContain(
+`<div id="sides-container">
+    <h1 class="display-4" id="sides-category-header">Select From Our Sides!</h1>
+    <div id="sides-category-wrapper">
+        <div class="container-fluid sides-category-container">
+            <h2 class="category-title"><a class='category-link'
+                    href="/menu/sides/1">Dips</a>
+            </h2>
+        </div>
+        <div class="container-fluid sides-category-container">
+            <h2 class="category-title"><a class='category-link'
+                    href="/menu/sides/2">Fat Fries</a>
+            </h2>
+        </div>
+        <div class="container-fluid sides-category-container">
+            <h2 class="category-title"><a class='category-link'
+                    href="/menu/sides/3">Salads</a>
+            </h2>
+        </div>
+        <div class="container-fluid sides-category-container">
+            <h2 class="category-title"><a class='category-link'
+                    href="/menu/sides/4">Sandos</a>
+            </h2>
+        </div>
+        <div class="container-fluid sides-category-container">
+            <h2 class="category-title"><a class='category-link'
+                    href="/menu/sides/5">Sides</a>
+            </h2>
+        </div>
+        <div class="container-fluid sides-category-container">
+            <h2 class="category-title"><a class='category-link'
+                    href="/menu/sides/6">Sweets</a>
+            </h2>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: '.sides-category-container',
+        translateX: 400,
+        delay: anime.stagger(200, { start: 500 })
+    });
+    anime({
+        targets: '.category-title',
+        translateY: 300
+    })
+</script>`
+        )
+    })
+    test('should return category id and title', async () => {
+        const helper = 
+`<h2 class="category-title"><a class='category-link' href="/menu/sides/{{category.id}}">{{category.title}}</a></h2>`;
+        const dbSideCategoryData = await SidesCategory.findByPk(4, {
+            include: [
+                {
+                    model: Sides,
+                    attributes: ['id', 'title'],
+                },
+            ],
+        })
+        const category = dbSideCategoryData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({category});
+        expect(result).toBe(
+`<h2 class="category-title"><a class='category-link' href="/menu/sides/4">Sandos</a></h2>`
+        )
+    })
+});
+
+describe('Render sides', () => {
+    test('should render sides', async () => {
+        const res = await request(app).get('/menu/sides/1');
+        expect(res.statusCode).toBe(200);
+        expect(res.header['content-type']).toBe('text/html; charset=utf-8');
+        expect(res.text).toContain(
+`<div class=\"container-fluid\" id=\"side-container\">
+    <h2 class=\"display-4\" id=\"side-title\">Dips</h2>
+    <h3 id=\"side-select-text\">We offer the following choices for Dips!</h3>
+    <div id=\"side-items-container\">
+        <div class=\"side-item\">
+            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/1\">Ranch</a></h3>
+        </div>
+        <div class=\"side-item\">
+            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/2\">Bleu Cheese</a></h3>
+        </div>
+        <div class=\"side-item\">
+            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/3\">Honey Mustard</a></h3>
+        </div>
+        <div class=\"side-item\">
+            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/4\">Fat Sauce</a></h3>
+        </div>
+        <div class=\"side-item\">
+            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/5\">Sweet Chili</a></h3>
+        </div>
+        <a href=\"/menu/sides\" id=\"sides-backlink\">Back to Sides</a>
+    </div>
+
+</div>
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js\"></script>
+<script>
+    anime({
+        targets: ['.side-item-title', '#sides-backlink'],
+        translateY: 300
+    })
+</script>`
+        )
+    })
+})
