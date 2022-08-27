@@ -100,7 +100,27 @@ body {
     padding-bottom: 0;
 }
 
+#hero-title {
+    font-size: 600%;
+    color: black;
+    padding-top: 5%;
+    font-weight: normal;
+    position: relative;
+    top: -300px;
+}
+
+#fb-span {
+    text-decoration: underline red 4px;
+    text-underline-offset: 40%;
+    font-weight: bolder;
+}
+
+#wb-span {
+    font-size: 45%;
+}
+
 #hero-container-desktop {
+    padding-top: 0px;
     margin-left: -30px;
     margin-right: -30px;
 }
@@ -114,10 +134,6 @@ body {
     background-size: cover;
 }
 
-#hero-title {
-    position: relative;
-    top: -325px;
-}
 
 /* SOCIAL MEDIA LINKS for HOMEPAGE */
 #home-socials {
