@@ -17,10 +17,12 @@ Sides.init({
     image: {
         type: DataTypes.BLOB, //might be in a binary format
         allowNull: true,
+        defaultValue: null,
     },
     alt_image: {
         type: DataTypes.TEXT, //text can be a long string as long as it's less than 65,535 bytes
         allowNull: true,
+        defaultValue: null,
     },
     cat_id: {
         type: DataTypes.INTEGER,
