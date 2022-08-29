@@ -742,6 +742,12 @@ body {
         width: 525px;
     }
 
+    #menu-image-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
 }
 
 /* Media Queries for Tablets */
