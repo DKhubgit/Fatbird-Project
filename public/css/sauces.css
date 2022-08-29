@@ -20,11 +20,6 @@
     height: 100vh;
 }
 
-#single-side-container {
-    height: 100vh !important;
-    display: grid;
-    grid-template-columns: 1fr;
-}
 
 .sauce-name {
     font-size: 250%;

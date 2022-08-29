@@ -48,4 +48,23 @@
     #about-title {
         font-size: 125% !important;
     }
+
+    #about-header {
+        font-size: 275%;
+        padding-bottom: 2%;
+    }
+
+    #location-map {
+        height: 300px;
+        width: 325px;
+        border-radius: 5%;
+    }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 990px) {
+    #location-map {
+        height: 600px;
+        width: 525px;
+    }
 }

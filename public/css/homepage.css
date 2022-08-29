@@ -46,3 +46,28 @@
 #second-hero-image {
     background-image: url('/images/image2.jpeg');
 }
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    #hero-container-desktop {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    #hero-title {
+        font-size: 400%;
+    }
+
+    #hero-image-container {
+        background-attachment: scroll;
+    }
+
+    #first-hero-image {
+        background-attachment: scroll;
+    }
+
+    #second-hero-image {
+        background-attachment: scroll;
+    }
+}
