@@ -8,6 +8,7 @@
     padding-bottom: 2%;
     margin-bottom: 5%;
     text-align: center;
+    overflow: auto;
 }
 
 #address-container {
@@ -92,4 +93,18 @@
         padding-top: 4%;
     }
 
+
+    #location-map {
+        height: 300px;
+        width: 325px;
+        border-radius: 5%;
+    }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 990px) {
+    #location-map {
+        height: 600px;
+        width: 525px;
+    }
 }

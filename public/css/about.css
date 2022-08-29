@@ -2,7 +2,7 @@
 #about-container {
     padding-top: 5%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    height: 100vh;
 }
 
 .about-text {
@@ -11,15 +11,6 @@
     font-size: 150%;
     font-weight: bold;
     text-align: center;
-}
-
-.about-sub-container {
-    margin-bottom: 5%;
-}
-
-.about-sub-container:last-child {
-    margin-bottom: 10%;
-    padding-bottom: 5%;
 }
 
 #history-container {
@@ -54,17 +45,4 @@
         padding-bottom: 2%;
     }
 
-    #location-map {
-        height: 300px;
-        width: 325px;
-        border-radius: 5%;
-    }
-
-}
-
-@media screen and (min-width: 801px) and (max-width: 990px) {
-    #location-map {
-        height: 600px;
-        width: 525px;
-    }
 }
