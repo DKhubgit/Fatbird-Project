@@ -94,7 +94,6 @@ body {
 /* HOMEPAGE STYLES */
 .jumbotron {
     background-color: white;
-    margin-bottom: 4%;
     padding-bottom: 0;
 }
 
@@ -121,10 +120,9 @@ body {
     margin-right: -30px;
 }
 
-#hero-image-container {
+.hero-image-container {
     width: 100%;
     height: 600px;
-    background-image: url('/images/image3.jpeg');
     margin-bottom: 1%;
     background-attachment: fixed;
     background-position: center;
@@ -134,16 +132,12 @@ body {
     margin-right: auto;
 }
 
+#first-hero-image {
+    background-image: url('/images/image3.jpeg');
+}
+
 #second-hero-image {
     background-image: url('/images/image2.jpeg');
-    width: 100%;
-    height: 600px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* SOCIAL MEDIA LINKS for HOMEPAGE */
@@ -323,34 +317,26 @@ body {
 /* Menu Styles - Main Menu page */
 #main-menu-container {
     padding-bottom: 5%;
+    height: 100vh !important;
+    overflow-y: hidden;
+}
+
+.main-menu-header {
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+
 }
 
 /* Styles for wing information (above images) */
 #wing-info-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25%;
     text-align: center;
     padding: 5%;
     padding-top: 1%;
     line-height: 1.5rem;
-}
-
-/* Styles for menu images (images below sizes) */
-#menu-image-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-/* Styles for chicken images*/
-.menu-img {
-    margin: auto;
-    width: 350px;
-    height: 350px;
-    max-height: 350px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    bottom: 150px;
 }
 
 .menu-title {
@@ -632,6 +618,20 @@ body {
         display: none;
     }
 
+    /* add padding to main menu header */
+    .main-menu-header {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    #main-menu-container {
+        overflow-y: scroll;
+    }
+
+    #wing-info-container {
+        grid-gap: 5%
+    }
+
     /* positioning for sides */
     #sides-container {
         padding-top: 15%;
@@ -676,7 +676,8 @@ body {
     #hero-container-desktop {
         margin-left: -20px;
         margin-right: -20px;
-        padding-bottom: 100px;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
     }
 
     #hero-title {
@@ -729,6 +730,10 @@ body {
         background-attachment: scroll;
     }
 
+    #first-hero-image {
+        background-attachment: scroll;
+    }
+
     #second-hero-image {
         background-attachment: scroll;
     }
@@ -752,6 +757,10 @@ body {
 
 /* Media Queries for Tablets */
 @media screen and (min-width: 1000px) {
+    #hero-title {
+        font-size: 700%;
+    }
+
     #hero-container-desktop {
         margin-left: -50px;
         margin-right: -50px;
