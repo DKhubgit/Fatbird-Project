@@ -1,0 +1,68 @@
+/* Menu Styles - Main Menu page */
+#main-menu-container {
+    padding-bottom: 5%;
+    height: 100vh !important;
+    overflow-y: hidden;
+}
+
+.main-menu-header {
+    text-align: center;
+    font-size: 125%;
+    font-weight: bold;
+
+}
+
+/* Styles for wing information (above images) */
+#wing-info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25%;
+    text-align: center;
+    padding: 5%;
+    padding-top: 1%;
+    line-height: 1.5rem;
+}
+
+.menu-title {
+    font-size: 450%;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    padding-bottom: 2%;
+    text-decoration: underline black 2px !important;
+    text-underline-offset: 10%;
+}
+
+.menu-link {
+    text-decoration: underline black 2px !important;
+    text-underline-offset: 10%;
+    color: red;
+
+}
+
+.menu-link:hover {
+    text-decoration: underline black 2px !important;
+    text-underline-offset: 10%;
+    color: red;
+}
+
+.wing-type {
+    font-size: 275%;
+    font-weight: bold;
+    text-decoration: underline red 2px !important;
+    text-underline-offset: 6%;
+    margin-bottom: 5%;
+}
+
+.wing-info-description,
+.wing-info-ul {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.wing-size-container {
+    position: relative;
+    bottom: 150px;
+}

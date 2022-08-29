@@ -1,0 +1,44 @@
+/* STYLES FOR SIDES CATEGORY PAGE */
+#sides-container {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+#sides-category-header {
+    text-align: center;
+    color: red;
+    padding-top: 5%;
+    font-weight: bolder;
+}
+
+#sides-category-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 25%;
+    padding: 5%;
+    margin-bottom: 15%;
+}
+
+.sides-category-container {
+    position: relative;
+    left: -400px
+}
+
+.category-title {
+    font-size: 350%;
+    padding-bottom: 1%;
+    text-align: center;
+    position: relative;
+    top: -300px;
+    font-weight: bold;
+}
+
+.category-link {
+    color: black;
+}
+
+.category-link:hover {
+    color: red;
+    text-decoration: none;
+}
