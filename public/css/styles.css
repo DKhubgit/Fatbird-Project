@@ -91,56 +91,7 @@ body {
     display: block;
 }
 
-/* HOMEPAGE STYLES */
-.jumbotron {
-    background-color: white;
-    padding-bottom: 0;
-}
-
-#hero-title {
-    font-size: 600%;
-    color: black;
-    padding-top: 5%;
-    font-weight: normal;
-}
-
-#fb-span {
-    text-decoration: underline red 4px !important;
-    text-underline-offset: 40%;
-    font-weight: bolder;
-}
-
-#wb-span {
-    font-size: 45%;
-}
-
-#hero-container-desktop {
-    padding-top: 0px;
-    margin-left: -30px;
-    margin-right: -30px;
-}
-
-.hero-image-container {
-    width: 100%;
-    height: 600px;
-    margin-bottom: 1%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#first-hero-image {
-    background-image: url('/images/image3.jpeg');
-}
-
-#second-hero-image {
-    background-image: url('/images/image2.jpeg');
-}
-
-/* SOCIAL MEDIA LINKS for HOMEPAGE */
+/* SOCIAL MEDIA LINKS PARTIALS*/
 #home-socials {
     padding-top: 2%;
     margin-bottom: 3%;
