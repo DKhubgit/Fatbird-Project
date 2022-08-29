@@ -718,6 +718,10 @@ body {
         border-radius: 5%;
     }
 
+    #hero-image-container {
+        background-attachment: scroll;
+    }
+
 }
 
 /* Specific media query for tablets*/
