@@ -418,30 +418,30 @@ describe('Render sides', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div class=\"container-fluid\" id=\"side-container\">
-    <h2 class=\"display-4\" id=\"side-title\">Dips</h2>
-    <h3 id=\"side-select-text\">We offer the following choices for Dips!</h3>
-    <div id=\"side-items-container\">
-        <div class=\"side-item\">
-            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/1\">Ranch</a></h3>
+`<div class="container-fluid" id="side-container">
+    <h2 class="display-4" id="side-title">Dips</h2>
+    <h3 id="side-select-text">We offer the following choices for Dips!</h3>
+    <div id="side-items-container">
+        <div class="side-item">
+            <h3 class="side-item-title"> <a class='side-item-link' href="/menu/side/1">Ranch</a></h3>
         </div>
-        <div class=\"side-item\">
-            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/2\">Bleu Cheese</a></h3>
+        <div class="side-item">
+            <h3 class="side-item-title"> <a class='side-item-link' href="/menu/side/2">Bleu Cheese</a></h3>
         </div>
-        <div class=\"side-item\">
-            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/3\">Honey Mustard</a></h3>
+        <div class="side-item">
+            <h3 class="side-item-title"> <a class='side-item-link' href="/menu/side/3">Honey Mustard</a></h3>
         </div>
-        <div class=\"side-item\">
-            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/4\">Fat Sauce</a></h3>
+        <div class="side-item">
+            <h3 class="side-item-title"> <a class='side-item-link' href="/menu/side/4">Fat Sauce</a></h3>
         </div>
-        <div class=\"side-item\">
-            <h3 class=\"side-item-title\"> <a class='side-item-link' href=\"/menu/side/5\">Sweet Chili</a></h3>
+        <div class="side-item">
+            <h3 class="side-item-title"> <a class='side-item-link' href="/menu/side/5">Sweet Chili</a></h3>
         </div>
-        <a href=\"/menu/sides\" id=\"sides-backlink\">Back to Sides</a>
+        <a href="/menu/sides" id="sides-backlink">Back to Sides</a>
     </div>
 
 </div>
-<script src=\"https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js\"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
     anime({
         targets: ['.side-item-title', '#sides-backlink'],
@@ -450,4 +450,148 @@ describe('Render sides', () => {
 </script>`
         )
     })
+    test('should return side category title', async () => {
+        const helper = 
+`<h2 class="display-4" id="side-title">{{sideCategory.title}}</h2><h3 id="side-select-text">We offer the following choices for {{sideCategory.title}}!</h3>`;
+        const dbSideCategoryData = await SidesCategory.findByPk(2, {
+            include: [
+                {
+                    model: Sides,
+                    attributes: ['id', 'title'],
+                },
+            ],
+        })
+        const sideCategory = dbSideCategoryData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({sideCategory});
+        expect(result).toBe(
+`<h2 class="display-4" id="side-title">Fat Fries</h2><h3 id="side-select-text">We offer the following choices for Fat Fries!</h3>`
+        )
+    })
+    test('should return side id and title', async () => {
+        const helper = 
+`{{#each sideCategory.sides as |side|}}<div class="side-item"><h3 class="side-item-title"> <a class='side-item-link' href="/menu/side/{{side.id}}">{{side.title}}</a></h3></div>{{/each}}`;
+        const dbSideCategoryData = await SidesCategory.findByPk(5, {
+            include: [
+                {
+                    model: Sides,
+                    where: {id: 23},
+                    attributes: ['id', 'title'],
+                    
+                },
+            ],
+        })
+        const sideCategory = dbSideCategoryData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({sideCategory});
+        expect(result).toBe(
+`<div class="side-item"><h3 class="side-item-title"> <a class='side-item-link' href="/menu/side/23">Garlic Noodles</a></h3></div>`
+        )
+    })
+});
+
+describe('Render side', () => {
+    test('should render side', async () => {
+        const res = await request(app).get('/menu/side/16');
+        expect(res.statusCode).toBe(200);
+        expect(res.header['content-type']).toBe('text/html; charset=utf-8');
+        expect(res.text).toContain(
+`<div id="single-side-container">
+    <h2 class="side-item-title">Bleu Wedge</h2>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: ['.side-item-title', '#sides-backlink'],
+        translateY: 300
+    })
+</script>`
+        );
+    })
+    test('should return side title', async () => {
+        const helper =
+`<h2 class="side-item-title">{{side.title}}</h2>`;
+        const dbSideData = await Sides.findByPk(29);
+        const side = dbSideData.get({ plain: true });
+        const template = Handlebars.compile(helper);
+        const result = template({side});
+        expect(result).toBe(
+`<h2 class="side-item-title">Fried Pickles</h2>`
+        )
+    });
+})
+
+describe('Render contact', () => {
+    test('should render contact', async () => {
+        const res = await request(app).get('/contact');
+        expect(res.statusCode).toBe(200);
+        expect(res.header['content-type']).toBe('text/html; charset=utf-8');
+        expect(res.text).toContain(
+`<div class="container-fluid" id="contact-container">
+    <div class="container info-container" id="address-container">
+        <h3 class="info-title" id="address-title">Location</h3>
+        <p id="address-text" class="info-text">
+            Address 📍: <a class="contact-link"
+                href="https://www.google.com/maps?ll=32.032001,-102.125877&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=9583460874408612889">3209
+                Courtyard Drive Ste L, Midland, TX, United States, Texas </a><br>
+            <br>
+        </p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3382.3764136158006!2d-102.1258773!3d32.0320014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fbd9284c876925%3A0x84ff4ae3d1fad419!2sFat%20Birds%20Wing%20Bar!5e0!3m2!1sen!2sus!4v1661119650772!5m2!1sen!2sus"
+            width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" id="location-map">
+        </iframe>
+    </div>
+    <div class="container info-container" id="contact-info-container">
+        <h3 class="info-title" id="contact-info-title">Contact</h3>
+        <p id="contact-phone" class="info-text">
+            📞: <a class="contact-link" href="tel:(432) 218-7390">(432)-218-7390 <br></a>
+            <br>
+            📧: <a class="contact-link" href="mailto:FatBirdMidland@gmail.com">FatBirdMidland@gmail.com <br></a>
+            <br>
+            <i class="fa-brands fa-yelp"></i> : <a class="contact-link"
+                href="https://www.yelp.com/biz/fat-birds-wing-bar-midland"> Yelp Page
+                <br></a>
+            <br>
+            <i class="fa-brands fa-square-facebook"></i> : <a class="contact-link"
+                href="https://www.facebook.com/people/Fat-Birds-Wing-Bar/100064282713069/">Facebook
+                Page
+                <br></a>
+            <br>
+            <i class="fa-brands fa-instagram"></i> : <a class="contact-link"
+                href="https://www.instagram.com/fatbirdswingbar/?hl=en">Instagram
+                <br></a>
+
+        </p>
+    </div>
+    <div class="container info-container" id="business-hours-container">
+        <h3 class="info-title" id="business-hours-title">Business Hours</h3>
+        <p id="business-hours-text" class="info-text">
+            Mon: Closed <br>
+            <br>
+            Tue: 11:00 AM - 9:00 PM <br>
+            <br>
+            Wed: 11:00 AM - 9:00 PM <br>
+            <br>
+            Thu: 11:00 AM - 9:00 PM <br>
+            <br>
+            Fri: 11:00 AM - 10:00 PM <br>
+            <br>
+            Sat: 11:00 AM - 10:00 PM <br>
+            <br>
+            Sun: 11:00 AM - 9:00 PM <br>
+        </p>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://kit.fontawesome.com/22e6b9b0f7.js" crossorigin="anonymous"></script>
+
+<script>
+    anime({
+        targets: '.info-container',
+        translateY: 300,
+    })
+</script>`
+        )
+    });
 })
