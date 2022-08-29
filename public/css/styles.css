@@ -468,6 +468,7 @@ body {
 /* STYLES FOR SIDES CATEGORY PAGE */
 #sides-container {
     height: 100vh;
+    overflow-y: scroll;
 }
 
 #sides-category-header {
@@ -619,7 +620,8 @@ body {
 
     /* positioning for sides */
     #sides-container {
-        padding-top: 25%;
+        padding-top: 15%;
+        padding-bottom: 30%;
     }
 
     /* Positioning of Contact Container */
