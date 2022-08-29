@@ -493,8 +493,6 @@ body {
 
 .category-title {
     font-size: 350%;
-    /* text-decoration: underline red 2px;
-    text-underline-offset: 10%; */
     padding-bottom: 1%;
     text-align: center;
     position: relative;
@@ -597,6 +595,34 @@ body {
         font-size: 125% !important;
     }
 
+    #sauce-menu-title {
+        font-size: 375%;
+    }
+
+    .sauce-name {
+        font-size: 200%
+    }
+
+    .category-link {
+        font-size: 120%;
+        font-weight: bolder;
+    }
+
+    /* Hide titles in mobile */
+    #main-menu-title {
+        display: none;
+    }
+
+    #sides-category-header {
+        display: none;
+    }
+
+    /* positioning for sides */
+    #sides-container {
+        padding-top: 25%;
+    }
+
+    /* Positioning of Contact Container */
     #contact-container {
         display: grid;
         grid-template-areas:
@@ -609,6 +635,28 @@ body {
 
     .info-container {
         padding-top: 4%;
+    }
+
+    /* positioning for /menu */
+    #wing-info-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+
+
+    /* Positioning for sauces */
+    #sauces-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow: scroll;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .wing-size-container {
+        padding-bottom: 15%;
     }
 
     #hero-container-desktop {
