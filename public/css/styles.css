@@ -66,54 +66,6 @@ body {
     text-decoration: none;
 }
 
-/* About Us Styles */
-#about-container {
-    padding-top: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.about-text {
-    line-height: 1.6;
-    padding: 2% 5%;
-    font-size: 150%;
-    font-weight: bold;
-    text-align: center;
-}
-
-.about-sub-container {
-    margin-bottom: 5%;
-}
-
-.about-sub-container:last-child {
-    margin-bottom: 10%;
-    padding-bottom: 5%;
-}
-
-#history-container,
-#what-we-do-container,
-#goal-container {
-    position: relative;
-    top: -300px;
-}
-
-#about-header {
-    font-size: 400%;
-    text-decoration: underline black 2px !important;
-    text-underline-offset: 10%;
-}
-
-.about-title {
-    color: red;
-    font-weight: bold;
-    font-size: 300%;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    text-decoration: underline black 2px !important;
-    text-underline-offset: 10%;
-}
-
 /* Menu Styles - Main Menu page */
 #main-menu-container {
     padding-bottom: 5%;
