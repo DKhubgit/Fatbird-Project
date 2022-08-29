@@ -6,13 +6,6 @@
         padding-bottom: 2%;
     }
 
-    #sauce-menu-title {
-        font-size: 375%;
-    }
-
-    .sauce-name {
-        font-size: 200%
-    }
 
     .category-link {
         font-size: 120%;
@@ -28,17 +21,6 @@
     #sides-container {
         padding-top: 15%;
         padding-bottom: 30%;
-    }
-
-
-    /* Positioning for sauces */
-    #sauces-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        overflow: scroll;
-        padding-top: 5%;
-        padding-bottom: 5%;
     }
 
     #hero-container-desktop {

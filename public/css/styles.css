@@ -80,6 +80,18 @@ body {
     color: blue !important;
 }
 
+.menu-title {
+    font-size: 450%;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    padding-bottom: 2%;
+    text-decoration: underline black 2px !important;
+    text-underline-offset: 10%;
+}
+
 /* Styling for back button in sauce */
 .backLink {
     text-align: center;
@@ -95,6 +107,12 @@ body {
 
 .backLink:hover {
     color: red;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    .menu-title {
+        margin-bottom: 4%;
+    }
 }
 
 /* Media Queries for Larger Screens */
