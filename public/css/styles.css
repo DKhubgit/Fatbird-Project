@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 html,
@@ -64,8 +64,6 @@ body {
     justify-content: space-between !important;
 }
 
-
-
 /* Styles for dropdown menu on nav bar */
 .dropdown-item {
     font-weight: bold;
@@ -105,12 +103,10 @@ body {
     color: black;
     padding-top: 5%;
     font-weight: normal;
-    position: relative;
-    top: -300px;
 }
 
 #fb-span {
-    text-decoration: underline red 4px;
+    text-decoration: underline red 4px !important;
     text-underline-offset: 40%;
     font-weight: bolder;
 }
@@ -145,7 +141,7 @@ body {
     text-align: center;
     font-size: 300%;
     font-weight: bold;
-    text-decoration: underline 3.5px red;
+    text-decoration: underline 3.5px red !important;
     text-underline-offset: 13%;
     margin-bottom: 4%;
     margin-top: 2%;
@@ -180,7 +176,7 @@ body {
     padding-top: 2%;
     padding-bottom: 2%;
     margin-top: 1%;
-    font-size: 120%;
+    font-size: 75%;
     font-weight: bold;
     color: white;
 }
@@ -195,6 +191,7 @@ body {
     padding-bottom: 2%;
     margin-bottom: 5%;
     text-align: center;
+    overflow-y: scroll;
 }
 
 #address-container {
@@ -210,9 +207,7 @@ body {
 }
 
 #contact-info-container p {
-    text-align: left;
-    position: relative;
-    left: 25%;
+    text-align: center;
 }
 
 #business-hours-container {
@@ -231,7 +226,7 @@ body {
     font-weight: bold;
     margin-bottom: 3%;
     font-size: 250%;
-    text-decoration: underline black 3px;
+    text-decoration: underline black 3px !important;
     text-underline-offset: 10%;
 }
 
@@ -265,6 +260,7 @@ body {
 
 /* About Us Styles */
 #about-container {
+    padding-top: 5%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -295,7 +291,7 @@ body {
 
 #about-header {
     font-size: 400%;
-    text-decoration: underline black 2px;
+    text-decoration: underline black 2px !important;
     text-underline-offset: 10%;
 }
 
@@ -306,7 +302,7 @@ body {
     text-align: center;
     margin-top: 2%;
     margin-bottom: 2%;
-    text-decoration: underline black 2px;
+    text-decoration: underline black 2px !important;
     text-underline-offset: 10%;
 }
 
@@ -351,19 +347,19 @@ body {
     margin-top: 5%;
     margin-bottom: 1%;
     padding-bottom: 2%;
-    text-decoration: underline black 2px;
+    text-decoration: underline black 2px !important;
     text-underline-offset: 10%;
 }
 
 .menu-link {
-    text-decoration: underline black 2px;
+    text-decoration: underline black 2px !important;
     text-underline-offset: 10%;
     color: red;
 
 }
 
 .menu-link:hover {
-    text-decoration: underline black 2px;
+    text-decoration: underline black 2px !important;
     text-underline-offset: 10%;
     color: red;
 }
@@ -371,7 +367,7 @@ body {
 .wing-type {
     font-size: 275%;
     font-weight: bold;
-    text-decoration: underline red 2px;
+    text-decoration: underline red 2px !important;
     text-underline-offset: 6%;
     margin-bottom: 5%;
 }
@@ -436,13 +432,13 @@ body {
 /* Styles for sauce links */
 .sauce-link {
     color: red;
-    text-decoration: underline black 2px;
+    text-decoration: underline black 2px !important;
     text-underline-offset: 10%;
 }
 
 .sauce-link:hover {
     color: black;
-    text-decoration: underline red 2px;
+    text-decoration: underline red 2px !important;
     text-underline-offset: 10%;
 }
 
@@ -472,6 +468,7 @@ body {
 /* STYLES FOR SIDES CATEGORY PAGE */
 #sides-container {
     height: 100vh;
+    overflow-y: scroll;
 }
 
 #sides-category-header {
@@ -497,8 +494,6 @@ body {
 
 .category-title {
     font-size: 350%;
-    /* text-decoration: underline red 2px;
-    text-underline-offset: 10%; */
     padding-bottom: 1%;
     text-align: center;
     position: relative;
@@ -508,13 +503,11 @@ body {
 
 .category-link {
     color: black;
-    /* text-decoration: 1px underline red; */
 }
 
 .category-link:hover {
     color: red;
     text-decoration: none;
-    /* text-decoration: 1px underline black; */
 }
 
 /* STYLES FOR INDIVIDUAL SIDES PAGE */
@@ -530,7 +523,7 @@ body {
     margin-bottom: 2%;
     font-size: 600%;
     color: red;
-    text-decoration: underline black 4px;
+    text-decoration: underline black 4px !important;
     text-underline-offset: 20%;
 }
 
@@ -586,85 +579,52 @@ body {
     font-size: 175%;
 }
 
-/* Media Queries for Phones */
-@media screen and (max-width: 480px) {
-    #mobile-hero-img {
-        display: block;
-        height: 100%;
-        width: 100%;
-        padding-right: -8%;
-        padding-left: -8%;
+/* Media Queiries for slightly larger phones */
+@media screen and (min-width: 200px) and (max-width: 800px) {
+
+    /* Reduce font sizes for mobile devices */
+    .nav-link {
+        font-size: 100%;
     }
 
-    #hero-img {
+    #about-header {
+        font-size: 275%;
+        padding-bottom: 2%;
+    }
+
+    #about-title {
+        font-size: 125% !important;
+    }
+
+    #sauce-menu-title {
+        font-size: 375%;
+    }
+
+    .sauce-name {
+        font-size: 200%
+    }
+
+    .category-link {
+        font-size: 120%;
+        font-weight: bolder;
+    }
+
+    /* Hide titles in mobile */
+    #main-menu-title {
         display: none;
     }
 
-    #contact-container {
-        display: grid;
-        grid-template-areas:
-            "a a a a"
-            "b b b b"
-            "c c c c";
-        padding-bottom: 5%;
-        text-align: center;
-    }
-
-    #wing-info-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    .wing-size-container {
-        padding: 5%;
-    }
-
-    .wing-type {
-        font-size: 200%;
-    }
-
-    .info-container {
-        margin-bottom: 10%;
-    }
-
-    #sauces-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    #menu-image-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    #sides-category-wrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 10%;
-    }
-
     #sides-category-header {
-        margin-bottom: 5%;
+        display: none;
     }
 
-    #side-title {
-        margin-bottom: 5%
+    /* positioning for sides */
+    #sides-container {
+        padding-top: 15%;
+        padding-bottom: 30%;
     }
 
-    #side-items-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-
-    .menu-title {
-        margin-bottom: 4%;
-    }
-}
-
-/* Media Queiries for slightly larger phones */
-@media screen and (min-width: 200px) and (max-width: 800px) {
+    /* Positioning of Contact Container */
     #contact-container {
         display: grid;
         grid-template-areas:
@@ -677,6 +637,28 @@ body {
 
     .info-container {
         padding-top: 4%;
+    }
+
+    /* positioning for /menu */
+    #wing-info-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+
+
+    /* Positioning for sauces */
+    #sauces-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow: scroll;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .wing-size-container {
+        padding-bottom: 15%;
     }
 
     #hero-container-desktop {
@@ -725,41 +707,19 @@ body {
         margin-bottom: 4%;
     }
 
+    #location-map {
+        height: 300px;
+        width: 325px;
+        border-radius: 5%;
+    }
+
 }
 
-/* Specific media query for wing-info-container stacking */
-@media screen and (max-width: 660px) {
-    #wing-info-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    .wing-size-container {
-        padding: 5%;
-    }
-
-    #sauces-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    #sides-category-wrapper {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        grid-gap: 10%;
-    }
-
-    #side-title {
-        margin-bottom: 5%
-    }
-
-    #side-items-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-
-    .menu-title {
-        margin-bottom: 4%;
+/* Specific media query for tablets*/
+@media screen and (min-width: 801px) and (max-width: 990px) {
+    #location-map {
+        height: 600px;
+        width: 525px;
     }
 
 }
