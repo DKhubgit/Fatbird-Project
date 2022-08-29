@@ -59,3 +59,9 @@
     font-weight: bolder;
     padding-bottom: 5%;
 }
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    .nav-link {
+        font-size: 100%;
+    }
+}

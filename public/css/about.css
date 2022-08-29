@@ -43,3 +43,9 @@
     text-decoration: underline black 2px !important;
     text-underline-offset: 10%;
 }
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    #about-title {
+        font-size: 125% !important;
+    }
+}

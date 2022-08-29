@@ -73,3 +73,23 @@
 .fa-square-facebook {
     color: blue !important;
 }
+
+/* Media Queiries for slightly larger phones */
+@media screen and (min-width: 200px) and (max-width: 800px) {
+
+    /* Positioning of Contact Container */
+    #contact-container {
+        display: grid;
+        grid-template-areas:
+            "a a a a"
+            "b b b b"
+            "c c c c";
+        padding-bottom: 5%;
+        text-align: center;
+    }
+
+    .info-container {
+        padding-top: 4%;
+    }
+
+}

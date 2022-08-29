@@ -1,0 +1,14 @@
+/* Specific media query for tablets*/
+@media screen and (min-width: 801px) and (max-width: 990px) {
+    #location-map {
+        height: 600px;
+        width: 525px;
+    }
+
+    #menu-image-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+}

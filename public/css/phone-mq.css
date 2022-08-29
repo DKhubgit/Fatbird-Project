@@ -1,18 +1,9 @@
 /* Media Queiries for slightly larger phones */
 @media screen and (min-width: 200px) and (max-width: 800px) {
 
-    /* Reduce font sizes for mobile devices */
-    .nav-link {
-        font-size: 100%;
-    }
-
     #about-header {
         font-size: 275%;
         padding-bottom: 2%;
-    }
-
-    #about-title {
-        font-size: 125% !important;
     }
 
     #sauce-menu-title {
@@ -28,28 +19,10 @@
         font-weight: bolder;
     }
 
-    /* Hide titles in mobile */
-    #main-menu-title {
-        display: none;
-    }
-
     #sides-category-header {
         display: none;
     }
 
-    /* add padding to main menu header */
-    .main-menu-header {
-        padding-top: 10%;
-        padding-bottom: 10%;
-    }
-
-    #main-menu-container {
-        overflow-y: scroll;
-    }
-
-    #wing-info-container {
-        grid-gap: 5%
-    }
 
     /* positioning for sides */
     #sides-container {
@@ -57,26 +30,6 @@
         padding-bottom: 30%;
     }
 
-    /* Positioning of Contact Container */
-    #contact-container {
-        display: grid;
-        grid-template-areas:
-            "a a a a"
-            "b b b b"
-            "c c c c";
-        padding-bottom: 5%;
-        text-align: center;
-    }
-
-    .info-container {
-        padding-top: 4%;
-    }
-
-    /* positioning for /menu */
-    #wing-info-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
 
     /* Positioning for sauces */
     #sauces-container {
@@ -86,10 +39,6 @@
         overflow: scroll;
         padding-top: 5%;
         padding-bottom: 5%;
-    }
-
-    .wing-size-container {
-        padding-bottom: 15%;
     }
 
     #hero-container-desktop {
@@ -125,9 +74,6 @@
         grid-template-rows: 1fr;
     }
 
-    .menu-title {
-        margin-bottom: 4%;
-    }
 
     #home-socials {
         padding-bottom: 3%;

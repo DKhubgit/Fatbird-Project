@@ -66,3 +66,40 @@
     position: relative;
     bottom: 150px;
 }
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+
+    /* Hide titles in mobile */
+    #main-menu-title {
+        display: none;
+    }
+
+    /* add padding to main menu header */
+    .main-menu-header {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    #main-menu-container {
+        overflow-y: scroll;
+    }
+
+    #wing-info-container {
+        grid-gap: 5%
+    }
+
+    /* positioning for /menu */
+    #wing-info-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .wing-size-container {
+        padding-bottom: 15%;
+    }
+
+    .menu-title {
+        margin-bottom: 4%;
+    }
+
+}

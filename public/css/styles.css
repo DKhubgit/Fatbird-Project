@@ -66,6 +66,20 @@ body {
     text-decoration: none;
 }
 
+/* Font styles for contact */
+.fa-yelp {
+    color: red !important;
+}
+
+.fa-instagram {
+    color: brown !important;
+    font-weight: bold;
+}
+
+.fa-square-facebook {
+    color: blue !important;
+}
+
 /* Styling for back button in sauce */
 .backLink {
     text-align: center;
