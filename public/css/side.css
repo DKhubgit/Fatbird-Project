@@ -1,0 +1,68 @@
+/* STYLES FOR INDIVIDUAL SIDES PAGE */
+#side-container {
+    margin-bottom: 5%;
+    height: 100vh !important;
+    overflow-y: scroll;
+}
+
+#side-title {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 600%;
+    color: red;
+    text-decoration: underline black 4px !important;
+    text-underline-offset: 20%;
+}
+
+#side-items-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#side-select-text {
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+}
+
+#sides-backlink {
+    text-align: center;
+    margin: auto;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 6%;
+    font-size: 175%;
+    position: relative;
+    top: -300px;
+}
+
+.side-item-title {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 250%;
+    line-height: 3em;
+    position: relative;
+    top: -300px;
+}
+
+.side-item-link {
+    color: black;
+    text-align: center;
+}
+
+.side-item-link:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/* Styles for back button on single side (menu/side/id) */
+#single-side-back {
+    text-align: center;
+    margin: auto;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 6%;
+    font-size: 175%;
+}

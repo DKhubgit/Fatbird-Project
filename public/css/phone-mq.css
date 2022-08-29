@@ -1,0 +1,160 @@
+/* Media Queiries for slightly larger phones */
+@media screen and (min-width: 200px) and (max-width: 800px) {
+
+    /* Reduce font sizes for mobile devices */
+    .nav-link {
+        font-size: 100%;
+    }
+
+    #about-header {
+        font-size: 275%;
+        padding-bottom: 2%;
+    }
+
+    #about-title {
+        font-size: 125% !important;
+    }
+
+    #sauce-menu-title {
+        font-size: 375%;
+    }
+
+    .sauce-name {
+        font-size: 200%
+    }
+
+    .category-link {
+        font-size: 120%;
+        font-weight: bolder;
+    }
+
+    /* Hide titles in mobile */
+    #main-menu-title {
+        display: none;
+    }
+
+    #sides-category-header {
+        display: none;
+    }
+
+    /* add padding to main menu header */
+    .main-menu-header {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    #main-menu-container {
+        overflow-y: scroll;
+    }
+
+    #wing-info-container {
+        grid-gap: 5%
+    }
+
+    /* positioning for sides */
+    #sides-container {
+        padding-top: 15%;
+        padding-bottom: 30%;
+    }
+
+    /* Positioning of Contact Container */
+    #contact-container {
+        display: grid;
+        grid-template-areas:
+            "a a a a"
+            "b b b b"
+            "c c c c";
+        padding-bottom: 5%;
+        text-align: center;
+    }
+
+    .info-container {
+        padding-top: 4%;
+    }
+
+    /* positioning for /menu */
+    #wing-info-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    /* Positioning for sauces */
+    #sauces-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow: scroll;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .wing-size-container {
+        padding-bottom: 15%;
+    }
+
+    #hero-container-desktop {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    #hero-title {
+        font-size: 400%;
+    }
+
+    #menu-image-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #sides-category-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 10%;
+    }
+
+    #side-title {
+        margin-bottom: 5%;
+        font-size: 400%;
+    }
+
+    #side-items-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .menu-title {
+        margin-bottom: 4%;
+    }
+
+    #home-socials {
+        padding-bottom: 3%;
+    }
+
+    #home-reviews-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin-bottom: 4%;
+    }
+
+    #location-map {
+        height: 300px;
+        width: 325px;
+        border-radius: 5%;
+    }
+
+    #hero-image-container {
+        background-attachment: scroll;
+    }
+
+    #first-hero-image {
+        background-attachment: scroll;
+    }
+
+    #second-hero-image {
+        background-attachment: scroll;
+    }
+
+}
