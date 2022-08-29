@@ -3,7 +3,6 @@
     padding-top: 5%;
     margin-top: 5%;
     height: 100vh !important;
-    overflow-y: scroll;
 }
 
 .about-text {
@@ -37,9 +36,14 @@
 }
 
 @media screen and (min-width: 200px) and (max-width: 800px) {
+    #about-container {
+        overflow-y: scroll;
+    }
+
     #about-title {
         font-size: 125% !important;
     }
+
 
     #about-header {
         font-size: 275%;
