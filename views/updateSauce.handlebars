@@ -10,13 +10,14 @@
         </div>
         <div class="form-group">
             <label for="update-sauce-desc" id="update-sauce-desc-label">Enter a description for
-                {{sauce.title}}
+                {{sauce.title}}:
             </label>
             <input type="text" class="form-control" id="update-sauce-desc">
         </div>
         <div class="form-group">
-            <label for="update-spicy-level" class="sauce-question">What is the updated Spice Level? (optional)</label>
-            <select id="update-spicy-level">
+            <label for="update-spicy-level" id="spice-question">What is the updated Spice Level? (optional)</label>
+            <select id="update-spicy-level" class="form-control">
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -24,10 +25,10 @@
                 <option value="5">5</option>
             </select>
         </div>
-        <button class="btn btn-danger" type="submit">Update Side Category</button>
+        <button class="btn btn-danger" type="submit">Update {{sauce.title}} Sauce</button>
     </form>
     <br>
     <br>
     {{> userBack}}
 </div>
-<script src="/js/update-sauce-category.js"></script>
+<script src="/js/update-sauce.js"></script>
