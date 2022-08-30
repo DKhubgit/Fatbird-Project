@@ -3,7 +3,7 @@
     <form id="delete-sauce-form">
         <div class="form-group">
             <label for="deleteSauceID" id="delete-sauce-id-label">Which Category Should be Deleted?</label>
-            <select id="deleteSauceID" required>
+            <select id="deleteSauceID" class="form-control" required>
                 {{#each sauces as |sauce|}}
                 <option value="{{sauce.id}}">{{sauce.title}}</option>
                 {{/each}}

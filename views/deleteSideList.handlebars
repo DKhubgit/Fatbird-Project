@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/deleteSideList.css">
+<div id="delete-side-list-container">
+    <form id="delete-side-form">
+        <div class="form-group">
+            <label for="deleteSideID" id="delete-side-id-label">Which Side Should be Deleted?</label>
+            <select id="deleteSideID" class="form-control" required>
+                {{#each side as |s|}}
+                <option value="{{s.id}}">{{s.title}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button class="btn btn-danger" type="submit">Delete Side Category</button>
+    </form>
+    <br>
+    <br>
+    {{> userBack}}
+</div>
+<script src="/js/delete-side.js"></script>

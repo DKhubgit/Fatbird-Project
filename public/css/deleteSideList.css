@@ -1,0 +1,17 @@
+#delete-side-list-container {
+    height: 100vh;
+    padding-top: 10%;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#delete-side-id-label {
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#deleteSideID,
+#deleteSideID option {
+    font-weight: bold;
+    text-align: center;
+}

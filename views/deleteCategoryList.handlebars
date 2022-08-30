@@ -3,7 +3,7 @@
     <form id="delete-sideCategory-form">
         <div class="form-group">
             <label for="deleteCategID" id="delete-categ-id-label">Which Category Should be Deleted?</label>
-            <select id="deleteCategID" required>
+            <select id="deleteCategID" class="form-control" required>
                 {{#each sidesCategories as |side|}}
                 <option value="{{side.id}}">{{side.title}}</option>
                 {{/each}}
