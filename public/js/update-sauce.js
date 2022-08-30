@@ -1,12 +1,14 @@
 async function newFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('#title').value;
-    const description = document.querySelector('#description').value;
-    const spicy_level = document.querySelector('#spicy_level').value;
+    const title = document.querySelector('#update-sauce-name').value;
+    const description = document.querySelector('#update-sauce-desc').value;
+    const spicy_level = document.querySelector('#update-spicy-level').value;
+    let id = document.querySelector('#update-sauce-title').dataset.id;
 
     const response = await fetch(`/api/menu/sauce/:id`, {
         method: 'PUT',
         body: JSON.stringify({
+            id,
             title,
             description,
             spicy_level,
@@ -23,4 +25,4 @@ async function newFormHandler(event) {
     }
 }
 
-document.querySelector('.update-sauce-form').addEventListener('submit', newFormHandler);
+document.querySelector('#update-sauce-form').addEventListener('submit', newFormHandler);
