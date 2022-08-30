@@ -28,22 +28,39 @@ describe('Route homepage', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div class="jumbotron" id="hero-container-desktop">
-    <h1 class="display-1" id="hero-title">Fat Birds Wing Bar</h1>
-    <img class="img-fluid mx-auto" id="hero-img"
-        src="https://s3-media0.fl.yelpcdn.com/bphoto/PClfDiHUgmuiJktJKekwqQ/o.jpg">
-    </img>
-    <img src="https://s3-media0.fl.yelpcdn.com/bphoto/ThG14a-uWSXmdSjy2z3YuA/o.jpg" alt="" class="hidden"
-        id="mobile-hero-img">
-</div>
+    `<link rel="stylesheet" href="/css/homepage.css">
+<h1 class="display-1" id="hero-title">
+    <span id="fb-span">FAT BIRDS</span>
+    <br>
+    <span id="wb-span">―WING BAR―</span>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script>
-    anime({
-        targets: '#hero-title',
-        translateY: 300
-    })
-</script>`
+</h1>
+<div class="jumbotron" id="hero-container-desktop">
+    <div class="hero-image-container" id="first-hero-image">
+    </div>
+
+    <div class="container-fluid" id="home-socials">
+        <h5 id="socials-title">Follow Us!</h5>
+        <ul id="home-social-media-list">
+            <li class="social-li">
+                <a class="social-link" href="https://www.yelp.com/biz/fat-birds-wing-bar-midland">
+                    <i class="fa-brands fa-yelp"></i>
+                </a>
+            </li>
+            <li class="social-li">
+                <a class="social-link" href="https://www.facebook.com/people/Fat-Birds-Wing-Bar/100064282713069/">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+            </li>
+            <li class="social-li"><a class="social-link" href="https://www.instagram.com/fatbirdswingbar/?hl=en">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="hero-image-container" id="second-hero-image">
+    </div>
+</div>`
         )
     })
 });
@@ -54,54 +71,47 @@ describe('Route about me', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div class="container-fluid" id="about-container">
-    <div class="jumbotron">
-        <h1 class="display-1" id="about-header">Who Are We?</h1>
-    </div>
+    `<link rel="stylesheet" href="/css/about.css">
+<div class="container-fluid" id="about-container">
     <div id="history-container" class="about-sub-container">
         <h2 class="about-title">Our History</h2>
-        <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque debitis ipsam et, deleniti
-            ratione
-            exercitationem ad quia consequatur, perferendis odio explicabo itaque nam eum id iste voluptate ex
-            consectetur earum.
-            Autem cupiditate tempore iste ipsum repellendus rem magni quae impedit odit dolor aperiam, omnis nihil
-            quasi, esse inventore expedita quibusdam nulla. Omnis, eos accusantium explicabo facere officia consectetur.
-            Inventore, perspiciatis!
-            Pariatur cum molestiae mollitia doloribus minima corporis! Ipsa nisi adipisci laudantium doloremque vero
-            sunt totam temporibus, unde aperiam. Vero voluptatem exercitationem consequuntur velit, deserunt eligendi
-            facere accusantium nobis. Ullam, voluptatibus.</p>
+        <p class="about-text">Founded in 2020, Fat Birds Wing Bar strives to bring a fresh take on wings to Midland TX.
+            Our food is made to order so
+            the wings are hot and juicy and never sit around in a warmer. We also make all our sauces and dips fresh in
+            house using
+            real ingredients and cooking techniques. We aim for great tasting food along with our friendly staff and a
+            fun
+            environment for everyone to enjoy. We are family owned and family friendly. We hope to see you, and we
+            appreciate all
+            the love and support we’ve received over the years. <br>
+            <br>
+            Thank you and come see us soon!
+        </p>
     </div>
-    <div id="goal-container" class="about-sub-container">
-        <h2 class="about-title">Our Goals</h2>
-        <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque debitis ipsam et, deleniti
-            ratione
-            exercitationem ad quia consequatur, perferendis odio explicabo itaque nam eum id iste voluptate ex
-            consectetur earum.
-            Autem cupiditate tempore iste ipsum repellendus rem magni quae impedit odit dolor aperiam, omnis nihil
-            quasi, esse inventore expedita quibusdam nulla. Omnis, eos accusantium explicabo facere officia consectetur.
-            Inventore, perspiciatis!
-            Pariatur cum molestiae mollitia doloribus minima corporis! Ipsa nisi adipisci laudantium doloremque vero
-            sunt totam temporibus, unde aperiam. Vero voluptatem exercitationem consequuntur velit, deserunt eligendi
-            facere accusantium nobis. Ullam, voluptatibus.</p>
-    </div>
-    <div id="what-we-do-container" class="about-sub-container">
-        <h2 class="about-title">What We Do</h2>
-        <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque debitis ipsam et, deleniti
-            ratione
-            exercitationem ad quia consequatur, perferendis odio explicabo itaque nam eum id iste voluptate ex
-            consectetur earum.
-            Autem cupiditate tempore iste ipsum repellendus rem magni quae impedit odit dolor aperiam, omnis nihil
-            quasi, esse inventore expedita quibusdam nulla. Omnis, eos accusantium explicabo facere officia consectetur.
-            Inventore, perspiciatis!
-            Pariatur cum molestiae mollitia doloribus minima corporis! Ipsa nisi adipisci laudantium doloremque vero
-            sunt totam temporibus, unde aperiam. Vero voluptatem exercitationem consequuntur velit, deserunt eligendi
-            facere accusantium nobis. Ullam, voluptatibus.</p>
-    </div>
-</div>
+    <div class="container-fluid" id="home-socials">
+        <h5 id="socials-title">Follow Us!</h5>
+        <ul id="home-social-media-list">
+            <li class="social-li">
+                <a class="social-link" href="https://www.yelp.com/biz/fat-birds-wing-bar-midland">
+                    <i class="fa-brands fa-yelp"></i>
+                </a>
+            </li>
+            <li class="social-li">
+                <a class="social-link" href="https://www.facebook.com/people/Fat-Birds-Wing-Bar/100064282713069/">
+                    <i class="fa-brands fa-square-facebook"></i>
+                </a>
+            </li>
+            <li class="social-li"><a class="social-link" href="https://www.instagram.com/fatbirdswingbar/?hl=en">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
     anime({
-        targets: ['#history-container', '#what-we-do-container', '#goal-container'],
+        targets: ['#history-container'],
         translateY: 300,
     })
 </script>`
@@ -115,14 +125,19 @@ describe('Route menu', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div class="container-fluid" id="main-menu-container">
+    `<link rel="stylesheet" href="/css/main-menu.css">
+<div class="container-fluid" id="main-menu-container">
     <div id="sizes-container">
-        <h1 class="menu-title">Sizes</h1>
+        <h1 class="menu-title" id="main-menu-title">SIZES</h1>
+        <h3 class="main-menu-header">
+            Our chicken is made fresh in house, using real
+            ingredients and real cooking techniques. <br>
+        </h3>
         <div id="wing-info-container">
             <div class="wing-size-container">
                 <h2 class="wing-type">6 Wings</h2>
                 <p class="wing-info-description">
-                    Choice Between:
+                    Choice Of:
                 <ul class="wing-info-ul">
                     <li>- 1 Sauce</li>
                     <li>- 1 Dip</li>
@@ -132,7 +147,7 @@ describe('Route menu', () => {
             <div class="wing-size-container">
                 <h2 class="wing-type">8 Wings</h2>
                 <p class="wing-info-description">
-                    Choice Between:
+                    Choice Of:
                 <ul class="wing-info-ul">
                     <li>- 2 Sauces</li>
                     <li>- 1 Dip</li>
@@ -142,29 +157,35 @@ describe('Route menu', () => {
             <div class="wing-size-container">
                 <h2 class="wing-type">12 Wings</h2>
                 <p class="wing-info-description">
-                    Choice Between:
+                    Choice Of:
                 <ul class="wing-info-ul">
                     <li>- 3 Sauces</li>
                     <li>- 2 Dips</li>
                 </ul>
                 </p>
             </div>
+            <div class="wing-size-container">
+                <h2 class="wing-type">Tenders</h2>
+                <p class="wing-info-description">
+                    Sizes:
+                <ul class="wing-info-ul">
+                    <li>- 3 pieces</li>
+                    <li>- 5 pieces</li>
+                    <li>- 9 pieces</li>
+                </ul>
+                </p>
+            </div>
         </div>
-        <div class="container-fluid" id="menu-image-container">
-            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-                )"></div>
-            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1626082935855-cb6e6c670f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-                )"></div>
-            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1631897788978-da06ec45adcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-                )"></div>
-        </div>
+
     </div>
 </div>
-
+<h4 class="main-menu-header">
+    Food allergy or dietary concerns? Please let us know before ordering.
+</h4>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
     anime({
-        targets: ['.wing-size-container', '.menu-img'],
+        targets: ['.wing-size-container'],
         translateY: 200
     });
 </script>`
@@ -173,12 +194,13 @@ describe('Route menu', () => {
 });
 
 describe('Render sauces', () => {
-    test('should render sauce', async () => {
+    test('should render sauces', async () => {
         const res = await request(app).get('/menu/sauces');
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<h2 class="menu-title">Sauces</h2>
+    `<link rel="stylesheet" href="/css/sauces.css">
+<h2 class="menu-title" id="sauce-menu-title">SAUCES</h2>
 <h3 id="side-select-text">All sauces are made fresh in house!</h3>
 <div id="sauces-container">
     <div class="sauce-container">
@@ -288,7 +310,8 @@ describe('Render sauce', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div class="sauce-container">
+    `<link rel="stylesheet" href="/css/sauces.css">
+<div class="sauce-container" id="single-sauce-container">
     <h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/4">Garlic Parm</a> </h2>
     <p class="sauce-description">Hope you&#x27;re not on a date! Oodles of Garlic n Parm.</p>
 </div>
@@ -343,7 +366,8 @@ describe('Render sidesCategories', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div id="sides-container">
+    `<link rel="stylesheet" href="/css/sides.css">
+<div id="sides-container">
     <h1 class="display-4" id="sides-category-header">Select From Our Sides!</h1>
     <div id="sides-category-wrapper">
         <div class="container-fluid sides-category-container">
@@ -383,7 +407,7 @@ describe('Render sidesCategories', () => {
     anime({
         targets: '.sides-category-container',
         translateX: 400,
-        delay: anime.stagger(200, { start: 500 })
+        delay: anime.stagger(200, { start: 350 })
     });
     anime({
         targets: '.category-title',
@@ -418,7 +442,9 @@ describe('Render sides', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div class="container-fluid" id="side-container">
+    `<link rel="stylesheet" href="/css/sides.css">
+<link rel="stylesheet" href="/css/side.css">
+<div class="container-fluid" id="side-container">
     <h2 class="display-4" id="side-title">Dips</h2>
     <h3 id="side-select-text">We offer the following choices for Dips!</h3>
     <div id="side-items-container">
@@ -439,7 +465,6 @@ describe('Render sides', () => {
         </div>
         <a href="/menu/sides" id="sides-backlink">Back to Sides</a>
     </div>
-
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
@@ -496,13 +521,20 @@ describe('Render side', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div id="single-side-container">
-    <h2 class="side-item-title">Bleu Wedge</h2>
+    `<link rel="stylesheet" href="/css/sides.css">
+<link rel="stylesheet" href="/css/side.css">
+<div id="single-side-container">
+    <div class="single-side-wrapper">
+        <h2 class="side-item-title">Bleu Wedge</h2>
+    </div>
+
+    <a href="/menu/sides/3" id="single-side-back">Back</a>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
     anime({
-        targets: ['.side-item-title', '#sides-backlink'],
+        targets: ['.side-item-title'],
         translateY: 300
     })
 </script>`
@@ -527,11 +559,12 @@ describe('Render contact', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-`<div class="container-fluid" id="contact-container">
+    `<link rel="stylesheet" href="/css/contact.css">
+<div class="container-fluid" id="contact-container">
     <div class="container info-container" id="address-container">
         <h3 class="info-title" id="address-title">Location</h3>
         <p id="address-text" class="info-text">
-            Address 📍: <a class="contact-link"
+            <a class="contact-link"
                 href="https://www.google.com/maps?ll=32.032001,-102.125877&z=16&t=m&hl=en&gl=US&mapclient=embed&cid=9583460874408612889">3209
                 Courtyard Drive Ste L, Midland, TX, United States, Texas </a><br>
             <br>
@@ -581,11 +614,30 @@ describe('Render contact', () => {
             <br>
             Sun: 11:00 AM - 9:00 PM <br>
         </p>
+        <br>
+        <br>
     </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<div class="container-fluid" id="home-socials">
+    <h5 id="socials-title">Follow Us!</h5>
+    <ul id="home-social-media-list">
+        <li class="social-li">
+            <a class="social-link" href="https://www.yelp.com/biz/fat-birds-wing-bar-midland">
+                <i class="fa-brands fa-yelp"></i>
+            </a>
+        </li>
+        <li class="social-li">
+            <a class="social-link" href="https://www.facebook.com/people/Fat-Birds-Wing-Bar/100064282713069/">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+        </li>
+        <li class="social-li"><a class="social-link" href="https://www.instagram.com/fatbirdswingbar/?hl=en">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </li>
+    </ul>
+</div><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script src="https://kit.fontawesome.com/22e6b9b0f7.js" crossorigin="anonymous"></script>
-
 <script>
     anime({
         targets: '.info-container',
