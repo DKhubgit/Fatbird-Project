@@ -177,6 +177,7 @@ router.get('/user/deleteCategoryList', async (req, res) => {
         const sidesCategories = dbSideCategoryData.map((category) =>
             category.get({ plain: true })
         );
+        console.log(sidesCategories)
         res.render('deleteCategoryList', { sidesCategories });
     }
     catch (err) {

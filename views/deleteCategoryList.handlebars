@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/deleteCategoryList.css">
+<div id="delete-cat-list-container">
+    <form id="delete-sideCategory-form">
+        <div class="form-group">
+            <label for="deleteCategID" id="delete-categ-id-label">Which Category Should be Deleted?</label>
+            <select id="deleteCategID" required>
+                {{#each sidesCategories as |side|}}
+                <option value="{{side.id}}">{{side.title}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button class="btn btn-danger" type="submit">Delete Side Category</button>
+    </form>
+    <br>
+    <br>
+    {{> userBack}}
+</div>
+<script src="/js/delete-side-category.js"></script>
