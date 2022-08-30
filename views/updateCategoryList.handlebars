@@ -1,7 +1,13 @@
 <link rel="stylesheet" href="/css/updateCategoryList.css">
-<div id="update-category-container" class="container-fluid mx-auto">
-    <form id="update-sideCategory-form">
-        <label for="udpateCategTitle">Select which Category to Rename</label>
-        <input type="text">
-    </form>
+<div id="update-category-list-container" class="container-fluid mx-auto">
+    <h2 id="categ-update-title">Which Category Would You Like to Rename?</h2>
+    {{#each sidesCategories as |sideCategory|}}
+    <div class="categ-title-container">
+        <a href="/user/updateCategory/{{sideCategory.id}}" class="categ-update-link">{{sideCategory.title}}</a>
+    </div>
+    {{/each}}
+
+    <br>
+    <br>
+    {{> userBack}}
 </div>
