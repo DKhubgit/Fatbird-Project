@@ -1,7 +1,7 @@
 
 async function newFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('#title').value;
+    const title = document.querySelector('#updateCategTitle').value;
 
     const response = await fetch(`api/menu/sidesCategory/:id`, {
         method: 'PUT',
