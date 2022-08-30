@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/deleteSauceList.css">
+<div id="delete-sauce-list-container">
+    <form id="delete-sauce-form">
+        <div class="form-group">
+            <label for="deleteSauceID" id="delete-sauce-id-label">Which Category Should be Deleted?</label>
+            <select id="deleteSauceID" required>
+                {{#each sauces as |sauce|}}
+                <option value="{{sauce.id}}">{{sauce.title}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button class="btn btn-danger" type="submit">Delete Sauce</button>
+    </form>
+    <br>
+    <br>
+    {{> userBack}}
+</div>
+<script src="/js/delete-side-category.js"></script>

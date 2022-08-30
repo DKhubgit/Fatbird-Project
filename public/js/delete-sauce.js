@@ -12,4 +12,4 @@ async function newFormHandler(event) {
     }
 }
 
-document.querySelector('.delete-sauce-form').addEventListener('submit', newFormHandler);
+document.querySelector('#delete-sauce-form').addEventListener('submit', newFormHandler);
