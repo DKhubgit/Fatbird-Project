@@ -210,7 +210,20 @@ router.get('/user/updateSauceList', async (req, res) => {
 
 // render update a sauce
 router.get('/user/updateSauce/:id', async (req, res) => {
-    res.render('updateSauce');
+    try {
+        const dbSauceData = await Sauce.findByPk(req.params.id)
+
+        if (!dbSauceData) {
+            res.status(404).json({ message: "No such category with that ID!" });
+        }
+
+        const sauce = dbSauceData.get({ plain: true })
+
+        res.render('updateSauce', { sauce });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 // render delete sauce list
