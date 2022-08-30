@@ -1,8 +1,60 @@
 :root {
-    --bg-color: #e5e5e5;
+    --bg-color: #fefae0;
 }
 
 #user-homepage-container {
     height: 100vh;
     background-color: var(--bg-color);
+}
+
+#user-homepage-title {
+    text-align: center;
+    padding: 5%;
+    font-size: 250%;
+    font-weight: bold;
+}
+
+#user-homepage-select-text {
+    font-size: 150%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+.user-link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 1%;
+}
+
+#user-links-wrapper {
+    background-color: #dee2e6;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.user-select-heading {
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+}
+
+.user-select-list-item {
+    text-align: center;
+}
+
+.user-select-list-link {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.user-select-list-link:hover {
+    color: red;
+    text-decoration: black underline;
 }
