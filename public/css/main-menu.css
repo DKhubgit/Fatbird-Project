@@ -81,7 +81,7 @@
     }
 
     #main-menu-container {
-        overflow-y: scroll;
+        overflow-y: hidden;
     }
 
     #wing-info-container {
@@ -95,7 +95,7 @@
     }
 
     .wing-size-container {
-        padding-bottom: 15%;
+        padding-bottom: 5%;
     }
 
     .menu-title {
