@@ -81,7 +81,7 @@
     text-align: center;
     font-weight: bold;
     font-size: 250%;
-    line-height: 3em;
+    line-height: 2.5em;
     position: relative;
     top: -300px;
 }
@@ -124,8 +124,8 @@
 
     .side-item-title {
         padding-top: 1%;
-        font-size: 210%;
-        line-height: 2em;
+        font-size: 175%;
+        line-height: 1.75em;
     }
 
 }
