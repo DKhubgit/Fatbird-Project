@@ -1,13 +1,15 @@
 async function newFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('#title').value;
-    const image = document.querySelector('#image').value;
-    const alt_image = document.querySelector('#alt_image').value;
-    const cat_id = document.querySelector('#cat_id').value;
+    const title = document.querySelector('#update-sideTitle').value;
+    const image = document.querySelector('#update-sideImage').value;
+    const alt_image = document.querySelector('#update_altImage').value;
+    const cat_id = document.querySelector('#update-cat_id').value;
+    const id = document.querySelector('#update-side-text').dataset.id
 
     const response = await fetch(`/api/menu/side/:id`, {
         method: 'PUT',
         body: JSON.stringify({
+            id,
             title,
             image,
             alt_image,
