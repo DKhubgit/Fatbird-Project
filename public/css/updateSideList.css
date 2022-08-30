@@ -1,0 +1,36 @@
+#update-side-list-container {
+    height: 100vh;
+    padding-top: 3%;
+    padding-left: 25%;
+    padding-right: 25%;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#update-side-title {
+    text-align: center;
+    color: black;
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.side-title-container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.side-update-link {
+    font-size: 100%;
+    color: red;
+
+}
+
+.side-update-link:hover {
+    color: black;
+    text-decoration: red underline;
+}

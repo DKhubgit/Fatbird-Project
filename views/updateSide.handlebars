@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/css/updateSide.css">
+<div id="update-side-container" class="container-fluid mx-auto">
+    <form id="update-side-form">
+        <div class="form-group">
+            <label for="update-sideTitle" class="update-side-text">Enter a new name for {{side.title}}:</label>
+            <input type="text" id="update-sideTitle" class="form-control" reqiured>
+        </div>
+        <div class="form-group">
+            <label for="update-sideImage" class="update-side-text">Add an image for the side (optional):</label>
+            <input type="file" class="form-control-file" id="update-sideImage">
+        </div>
+        <div class="form-group">
+            <label for="update-altImage" class="update-side-text">Please provide a description for the image
+                (optional):</label>
+            <input type="text" id="altImage" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="update-cat_id" class="update-side-text">What Category does the side belong to?</label>
+            <select id="update-cat_id" required class="form-control">
+                {{#each sidesCategories as |side|}}
+                <option value="{{side.id}}">{{side.title}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button class="btn btn-danger" type="submit">Update {{side.title}}</button>
+    </form>
+    <br>
+    <br>
+    {{> userBack}}
+</div>
+<script src="/js/update-side.js"></script>
