@@ -1,7 +1,7 @@
 /* HOMEPAGE STYLES */
 .jumbotron {
     background-color: white;
-    padding-bottom: 0;
+    padding-bottom: 0px;
 }
 
 #hero-title {
@@ -25,6 +25,7 @@
     padding-top: 0px;
     margin-left: -30px;
     margin-right: -30px;
+    margin-bottom: 0;
 }
 
 .hero-image-container {
@@ -69,5 +70,11 @@
     #second-hero-image {
         background-attachment: scroll;
         margin-bottom: -10px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 990px) {
+    #second-hero-image {
+        margin-bottom: -10px !important;
     }
 }
