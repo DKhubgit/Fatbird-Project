@@ -3,9 +3,9 @@ async function newFormHandler(event) {
     const sideID = document.querySelector('deleteSideID').value;
     const response = await fetch(`/api/menu/side/:id`, {
         method: 'DELETE',
-        body: {
+        body: JSON.stringify({
             id: sideID
-        }
+        })
     })
 
     if (response.ok) {

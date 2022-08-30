@@ -4,9 +4,9 @@ async function newFormHandler(event) {
 
     const response = await fetch(`/api/menu/sidesCategory/:id`, {
         method: 'DELETE',
-        body: {
+        body: JSON.stringify({
             id: categID
-        }
+        })
     })
 
     if (response.ok) {
