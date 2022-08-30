@@ -15,4 +15,4 @@ async function newFormHandler(event) {
     }
 }
 
-document.querySelector('.delete-side-form').addEventListener('submit', newFormHandler);
+document.querySelector('#delete-side-form').addEventListener('submit', newFormHandler);
