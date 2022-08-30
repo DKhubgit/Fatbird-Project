@@ -21,7 +21,7 @@ async function newFormHandler(event) {
     if (response.ok) {
         document.location.replace('/user');
     } else {
-        alert('Faild to add side');
+        alert('Failed to add side');
     }
 }
 
