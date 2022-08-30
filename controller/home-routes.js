@@ -225,9 +225,6 @@ router.get('/user/createSide', async (req, res) => {
             category.get({ plain: true })
         );
 
-
-        console.log(sidesCategories)
-
         res.render('createSide', { sidesCategories });
     }
     catch (err) {

@@ -2,19 +2,19 @@
 <div id="create-side-container" class="container-fluid mx-auto">
     <form id="add-side-form">
         <div class="form-group">
-            <label for="sideTitle">What is the name of the Side?</label>
+            <label for="sideTitle" class="add-side-text">What is the name of the Side?</label>
             <input type="text" id="sideTitle" class="form-control">
         </div>
         <div class="form-group">
-            <label for="sideImage">Add an image for the side (optional):</label>
+            <label for="sideImage" class="add-side-text">Add an image for the side (optional):</label>
             <input type="file" class="form-control-file" id="sideImage">
         </div>
         <div class="form-group">
-            <label for="altImage">Please provide a description for the image (optional):</label>
+            <label for="altImage" class="add-side-text">Please provide a description for the image (optional):</label>
             <input type="text" id="altImage" class="form-control">
         </div>
         <div class="form-group">
-            <label for="cat_id">What Category does the side belong to?</label>
+            <label for="cat_id" class="add-side-text">What Category does the side belong to?</label>
             <select id="cat_id">
                 {{#each sidesCategories as |side|}}
                 <option value="{{side.id}}">{{side.title}}</option>
@@ -23,5 +23,7 @@
         </div>
         <button class="btn btn-danger" type="submit">Add New Side</button>
     </form>
+    <br>
+    <br>
     {{> userBack}}
 </div>
