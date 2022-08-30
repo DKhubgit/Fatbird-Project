@@ -154,7 +154,20 @@ router.get('/user/updateCategoryList', async (req, res) => {
 
 // render update a side category
 router.get('/user/updateCategory/:id', async (req, res) => {
-    res.render('updateCategory');
+    try {
+        const dbSideCategoryData = await SidesCategory.findByPk(req.params.id)
+
+        if (!dbSideCategoryData) {
+            res.status(404).json({ message: "No such category with that ID!" });
+        }
+
+        const sideCategory = dbSideCategoryData.get({ plain: true })
+
+        res.render('updateCategory', { sideCategory });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 // render delete side category list
