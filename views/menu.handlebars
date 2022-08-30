@@ -1,12 +1,17 @@
+<link rel="stylesheet" href="/css/main-menu.css">
 <div class="container-fluid" id="main-menu-container">
     <div id="sizes-container">
-        <h1 class="menu-title">Sizes</h1>
+        <h1 class="menu-title" id="main-menu-title">SIZES</h1>
+        <h3 class="main-menu-header">
+            Our chicken is made fresh in house, using real
+            ingredients and real cooking techniques. <br>
+        </h3>
         <div id="wing-info-container">
             {{!-- Container for 6 wings --}}
             <div class="wing-size-container">
                 <h2 class="wing-type">6 Wings</h2>
                 <p class="wing-info-description">
-                    Choice Between:
+                    Choice Of:
                 <ul class="wing-info-ul">
                     <li>- 1 Sauce</li>
                     <li>- 1 Dip</li>
@@ -17,7 +22,7 @@
             <div class="wing-size-container">
                 <h2 class="wing-type">8 Wings</h2>
                 <p class="wing-info-description">
-                    Choice Between:
+                    Choice Of:
                 <ul class="wing-info-ul">
                     <li>- 2 Sauces</li>
                     <li>- 1 Dip</li>
@@ -28,30 +33,36 @@
             <div class="wing-size-container">
                 <h2 class="wing-type">12 Wings</h2>
                 <p class="wing-info-description">
-                    Choice Between:
+                    Choice Of:
                 <ul class="wing-info-ul">
                     <li>- 3 Sauces</li>
                     <li>- 2 Dips</li>
                 </ul>
                 </p>
             </div>
+            <div class="wing-size-container">
+                <h2 class="wing-type">Tenders</h2>
+                <p class="wing-info-description">
+                    Sizes:
+                <ul class="wing-info-ul">
+                    <li>- 3 pieces</li>
+                    <li>- 5 pieces</li>
+                    <li>- 9 pieces</li>
+                </ul>
+                </p>
+            </div>
         </div>
-        <div class="container-fluid" id="menu-image-container">
-            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-                )"></div>
-            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1626082935855-cb6e6c670f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-                )"></div>
-            <div class="menu-img" style="background-image: url(https://images.unsplash.com/photo-1631897788978-da06ec45adcb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80
-                )"></div>
-        </div>
+
     </div>
 </div>
-
+<h4 class="main-menu-header">
+    Food allergy or dietary concerns? Please let us know before ordering.
+</h4>
 {{!-- anime.js script --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script>
     anime({
-        targets: ['.wing-size-container', '.menu-img'],
+        targets: ['.wing-size-container'],
         translateY: 200
     });
 </script>
