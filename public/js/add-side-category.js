@@ -19,4 +19,4 @@ async function newFormHandler(event) {
     }
 }
 
-document.querySelector('.add-sideCategory-form').addEventListener('submit', newFormHandler);
+document.querySelector('#add-side-category-form').addEventListener('submit', newFormHandler);
