@@ -24,6 +24,18 @@ router.post('/login', passport.authenticate('local', {
 router.get('/register', (req,res) => {
     res.render('register');
 })
+router.get('/logout', (req,res) => {
+    res.render('logout');
+})
+
+router.post('/logout', (req,res) => {
+    req.logout((err) => {
+        if (err) {
+            res.status(401).json(err);
+        }
+    });
+    res.redirect("/");
+})
 
 //works
 router.post('/register', async (req,res) => {
@@ -56,5 +68,13 @@ passport.use(new LocalStrategy( {usernameField: 'email'}, async (email, password
     }
 
 }))
+
+passport.serializeUser(function(user, callback) {
+    callback(null, user);
+});
+  
+passport.deserializeUser(function(user, callback) {
+    callback(null, user);
+});
 
 module.exports = router;
