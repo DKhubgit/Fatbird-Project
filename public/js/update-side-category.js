@@ -1,12 +1,15 @@
-
 async function newFormHandler(event) {
     event.preventDefault();
-    const categID = document.querySelector('#updateCategID').value;
+
+    const categID = document.querySelector('#update-sideCategory-title').dataset.id;
+    const title = document.querySelector('#update-sideCategory-name').value;
 
     const response = await fetch(`api/menu/sidesCategory/:id`, {
         method: 'PUT',
         body: JSON.stringify({
-            id: categID
+            id: categID,
+            title
+
         }),
         headers: {
             'Content-Type': 'application/json',
