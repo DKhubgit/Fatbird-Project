@@ -2,7 +2,7 @@
 <div id="update-sauce-list-container" class="container-fluid mx-auto">
     <h2 id="sauce-update-title">Which Sauce Would You Like to Update?</h2>
     {{#each sauces as |sauce|}}
-    <div class="sayce-title-container">
+    <div class="sauce-title-container">
         <a href="/user/updateSauce/{{sauce.id}}" class="sauce-update-link">{{sauce.title}}</a>
     </div>
     {{/each}}

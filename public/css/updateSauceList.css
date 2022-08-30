@@ -8,6 +8,11 @@
     text-align: center;
 }
 
+.sauce-title-container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
 .sauce-update-link {
     font-size: 100%;
     color: red;
