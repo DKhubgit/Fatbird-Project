@@ -118,13 +118,13 @@ body {
 /* Back link on /user routes */
 .userBackLink {
     text-align: center;
-    color: red;
+    color: black;
     font-size: 150%;
     font-weight: bolder;
 }
 
 .userBackLink:hover {
-    color: black;
+    color: red;
 }
 
 @media screen and (min-width: 200px) and (max-width: 800px) {
