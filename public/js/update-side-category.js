@@ -15,24 +15,23 @@ async function newFormHandler(event) {
     const categID = document.querySelector('#update-sideCategory-title').dataset.id;
     let title = document.querySelector('#update-sideCategory-name').value;
     title = capitalize(title);
-    console.log(title);
 
-    // const response = await fetch(`api/menu/sidesCategory/:id`, {
-    //     method: 'PUT',
-    //     body: JSON.stringify({
-    //         id: categID,
-    //         title
+    const response = await fetch(`api/menu/sidesCategory/:id`, {
+        method: 'PUT',
+        body: JSON.stringify({
+            id: categID,
+            title
 
-    //     }),
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    // });
-    // if (response.ok) {
-    //     document.location.replace('/user');
-    // } else {
-    //     alert('Failed to update side category');
-    // }
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    });
+    if (response.ok) {
+        document.location.replace('/user');
+    } else {
+        alert('Failed to update side category');
+    }
 }
 
 document.querySelector('#update-sideCategory-form').addEventListener('submit', newFormHandler);
