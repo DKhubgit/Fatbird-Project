@@ -143,9 +143,9 @@ router.get('/user/createCategory', async (req, res) => {
 router.get('/user/updateCategoryList', async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll();
-        const sidesCategories = dbSideCategoryData.map((category) => 
+        const sidesCategories = dbSideCategoryData.map((category) =>
             category.get({ plain: true })
-        );   
+        );
         res.render('updateCategoryList', { sidesCategories });
     } catch (err) {
         res.status(500).json(err);
@@ -161,7 +161,7 @@ router.get('/user/updateCategory/:id', async (req, res) => {
 router.get('/user/deleteCategoryList', async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll();
-        const sidesCategories = dbSideCategoryData.map((category) => 
+        const sidesCategories = dbSideCategoryData.map((category) =>
             category.get({ plain: true })
         );
         res.render('deleteCategoryList', { sidesCategories });
@@ -185,7 +185,7 @@ router.get('/user/createSauce', async (req, res) => {
 router.get('/user/updateSauceList', async (req, res) => {
     try {
         const dbSauceData = await Sauce.findAll();
-        const sauces = dbSauceData.map((sauce) => 
+        const sauces = dbSauceData.map((sauce) =>
             sauce.get({ plain: true })
         );
         res.render('updateSauceList', { sauces });
@@ -219,7 +219,20 @@ router.get('/user/deleteSauce/:id', async (req, res) => {
 
 // render create a side
 router.get('/user/createSide', async (req, res) => {
-    res.render('createSide');
+    try {
+        const dbSideCategoryData = await SidesCategory.findAll();
+        const sidesCategories = dbSideCategoryData.map((category) =>
+            category.get({ plain: true })
+        );
+
+
+        console.log(sidesCategories)
+
+        res.render('createSide', { sidesCategories });
+    }
+    catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 // render update side list
@@ -227,7 +240,7 @@ router.get('/user/updateSideList', async (req, res) => {
     try {
         const dbSideData = await Sides.findAll();
 
-        const side = dbSideData.map((sides) => 
+        const side = dbSideData.map((sides) =>
             sides.get({ plain: true })
         );
         res.render('updateSideList', { side });
@@ -246,7 +259,7 @@ router.get('/user/deleteSideList', async (req, res) => {
     try {
         const dbSideData = await Sides.findAll();
 
-        const side = dbSideData.map((sides) => 
+        const side = dbSideData.map((sides) =>
             sides.get({ plain: true })
         );
         res.render('deleteSideList', { side });
