@@ -30,7 +30,6 @@
 .hero-image-container {
     width: 100%;
     height: 600px;
-    margin-bottom: 1%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -69,5 +68,6 @@
 
     #second-hero-image {
         background-attachment: scroll;
+        margin-bottom: -10px;
     }
 }
