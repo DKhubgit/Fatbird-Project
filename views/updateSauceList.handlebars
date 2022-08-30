@@ -1,13 +1,18 @@
 <link rel="stylesheet" href="/css/updateSauceList.css">
 <h2 id="sauce-update-title">Which Sauce Would You Like to Update?</h2>
 <div id="update-sauce-list-container" class="container-fluid mx-auto">
-    {{#each sauces as |sauce|}}
-    <div class="sauce-title-container">
-        <a href="/user/updateSauce/{{sauce.id}}" class="sauce-update-link">{{sauce.title}}</a>
+    <div class="dropdown show">
+        <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Select A Sauce to Update
+        </a>
+        <div class="dropdown-menu">
+            {{#each sauces as |sauce|}}
+            <div class="sauce-title-container">
+                <a href="/user/updateSauce/{{sauce.id}}" class="sauce-update-link">{{sauce.title}}</a>
+            </div>
+            {{/each}}
+        </div>
     </div>
-    {{/each}}
-
-    <br>
-    <br>
     {{> userBack}}
 </div>
