@@ -1,0 +1,20 @@
+#update-sauce-list-container {
+    height: 100vh;
+    padding-top: 10%;
+    padding-left: 25%;
+    padding-right: 25%;
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+}
+
+.sauce-update-link {
+    font-size: 100%;
+    color: red;
+
+}
+
+.sauce-update-link:hover {
+    color: black;
+    text-decoration: red underline;
+}
