@@ -1,7 +1,7 @@
 async function newFormHandler(event) {
     event.preventDefault();
-    const sideID = document.querySelector('deleteSideID').value;
-    const response = await fetch(`/api/menu/side/:id`, {
+    const sideID = document.querySelector('#deleteSideID').value;
+    const response = await fetch(`/api/menu/side/${sideID}`, {
         method: 'DELETE',
         body: JSON.stringify({
             id: sideID
