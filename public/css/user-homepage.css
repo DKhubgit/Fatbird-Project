@@ -1,10 +1,5 @@
-:root {
-    --bg-color: #fefae0;
-}
-
 #user-homepage-container {
     height: 100vh;
-    background-color: var(--bg-color);
 }
 
 #user-homepage-title {
@@ -30,22 +25,22 @@
 }
 
 #user-links-wrapper {
-    background-color: #dee2e6;
     padding-top: 2%;
     padding-bottom: 2%;
 }
 
 .user-select-heading {
     text-align: center;
-    font-size: 200%;
+    font-size: 300%;
     font-weight: bold;
     color: red;
     text-decoration: none;
 }
 
-.user-select-list-item {
+.home-dropdown-container {
     text-align: center;
 }
+
 
 .user-select-list-link {
     font-weight: bold;
