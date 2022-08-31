@@ -50,9 +50,7 @@ router.post('/register', async (req,res) => {
         const newUser = await User.create(user)
         res.status(200).redirect('/admin/login')
     } catch (err) {
-        //double check correct status code
-        res.redirect('/registerAgain')
-        res.status(404).json(err)
+        res.status(401).redirect('/admin/registerAgain');
     }
 })
 
