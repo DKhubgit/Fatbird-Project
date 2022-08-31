@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../model/User');
-const passport = require("../config/passport")
+const passport = require("../config/passport");
+require('dotenv').config();
 
 //works
 router.get('/login', (req,res) => {
@@ -47,8 +48,12 @@ router.post('/register', async (req,res) => {
         const email = req.body.email;
         const password = req.body.password;
         const user = { username: email, password: password, is_admin: true};
-        const newUser = await User.create(user)
-        res.status(200).redirect('/admin/login')
+        if (req.body.key === process.env.OWNER_REGISTER_KEY) {
+            await User.create(user);
+            res.status(200).redirect('/admin/login');
+        } else {
+            res.status(401).redirect('/admin/registerAgain')
+        }
     } catch (err) {
         res.status(401).redirect('/admin/registerAgain');
     }
