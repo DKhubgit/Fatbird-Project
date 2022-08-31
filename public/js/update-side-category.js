@@ -16,11 +16,11 @@ async function newFormHandler(event) {
     let title = document.querySelector('#update-sideCategory-name').value;
     title = capitalize(title);
 
-    const response = await fetch(`api/menu/sidesCategory/:id`, {
+    const response = await fetch(`api/menu/sidesCategory/${categID}`, {
         method: 'PUT',
         body: JSON.stringify({
             id: categID,
-            title
+            title: title
 
         }),
         headers: {
