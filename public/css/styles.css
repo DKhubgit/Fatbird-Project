@@ -115,6 +115,18 @@ body {
     color: red;
 }
 
+/* Back link on /user routes */
+.userBackLink {
+    text-align: center;
+    color: black;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.userBackLink:hover {
+    color: red;
+}
+
 @media screen and (min-width: 200px) and (max-width: 800px) {
     .menu-title {
         margin-bottom: 4%;
@@ -151,5 +163,4 @@ body {
         height: 400px;
         width: 900px;
     }
-
 }

@@ -1,12 +1,25 @@
+function capitalize(str) {
+    let arr = str.split(" ");
+    let res = [];
+    for (let i = 0; i < arr.length; i++) {
+        let title = arr[i]
+        title = title.charAt(0).toUpperCase() + title.slice(1);
+        res.push(title)
+    }
+    return res.join(" ");
+}
 
 async function newFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('#title').value;
 
-    const response = await fetch(`api/menu/sidesCategory/:id`, {
+    const categID = document.querySelector('#update-sideCategory-title').dataset.id;
+    let title = document.querySelector('#update-sideCategory-name').value;
+    title = capitalize(title);
+
+    const response = await fetch(`/api/menu/sidesCategory/${categID}`, {
         method: 'PUT',
         body: JSON.stringify({
-            title,
+            title: title
         }),
         headers: {
             'Content-Type': 'application/json',
@@ -19,4 +32,4 @@ async function newFormHandler(event) {
     }
 }
 
-document.querySelector('.update-sideCategory-form').addEventListener('submit', newFormHandler);
+document.querySelector('#update-sideCategory-form').addEventListener('submit', newFormHandler);

@@ -86,7 +86,7 @@
             "c c c c";
         padding-bottom: 5%;
         text-align: center;
-        overflow: auto;
+        overflow: hidden;
     }
 
     .info-container {

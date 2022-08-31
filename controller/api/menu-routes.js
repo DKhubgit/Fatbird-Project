@@ -123,7 +123,7 @@ router.post('/sidesCategory', async (req, res) => {
         const sidesCategoryData = await SidesCategory.create({
             title: req.body.title,
         });
-        
+
         res.status(200).json(sidesCategoryData);
     } catch (err) {
         res.status(500).json(err);
@@ -156,11 +156,11 @@ router.delete('/sidesCategory/:id', async (req, res) => {
         const sideCategory = await SidesCategory.destroy({
             where: {
                 id: req.params.id,
-            },
+            }
         });
 
-        if(!sideCategory) {
-            res.status(404).json({ message: "No side category found with that id!"});
+        if (!sideCategory) {
+            res.status(404).json({ message: "No side category found with that id!" });
             return;
         }
 

@@ -1,8 +1,11 @@
 async function newFormHandler(event) {
     event.preventDefault();
-
-    const response = await fetch(`/api/menu/sauce/:id`, {
+    const sauceID = document.querySelector('#deleteSauceID').value;
+    const response = await fetch(`/api/menu/sauce/${sauceID}`, {
         method: 'DELETE',
+        body: JSON.stringify({
+            id: sauceID
+        })
     });
 
     if (response.ok) {
@@ -12,4 +15,4 @@ async function newFormHandler(event) {
     }
 }
 
-document.querySelector('.delete-sauce-form').addEventListener('submit', newFormHandler);
+document.querySelector('#delete-sauce-form').addEventListener('submit', newFormHandler);

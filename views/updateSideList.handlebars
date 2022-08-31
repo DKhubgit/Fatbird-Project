@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/updateSideList.css">
+<h2 id="update-side-title">Which Side Would You Like to Update?</h2>
+<div id="update-side-list-container" class="container-fluid mx-auto">
+    <div class="dropdown show">
+        <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Select A Side to Update
+        </a>
+        <div class="dropdown-menu">
+            {{#each side as |s|}}
+            <a href="/user/updateSide/{{s.id}}" class="dropdown-item">{{s.title}}</a>
+            {{/each}}
+        </div>
+    </div>
+    <br>
+    <br>
+    {{> userBack}}
+</div>

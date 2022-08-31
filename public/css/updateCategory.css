@@ -1,0 +1,12 @@
+#update-category-container {
+    height: 100vh;
+    padding-top: 10%;
+    padding-left: 25%;
+    padding-right: 25%;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+#update-sideCategory-name {
+    margin-bottom: 5%;
+}

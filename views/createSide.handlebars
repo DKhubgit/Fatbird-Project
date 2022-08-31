@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/create-side.css">
+<div id="create-side-container" class="container-fluid mx-auto">
+    <form id="add-side-form">
+        <div class="form-group">
+            <label for="sideTitle" class="add-side-text">What is the name of the Side?</label>
+            <input type="text" id="sideTitle" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="sideImage" class="add-side-text">Add an image for the side (optional):</label>
+            <input type="file" class="form-control-file" id="sideImage">
+        </div>
+        <div class="form-group">
+            <label for="altImage" class="add-side-text">Please provide a description for the image (optional):</label>
+            <input type="text" id="altImage" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="cat_id" class="add-side-text">What Category does the side belong to?</label>
+            <select id="cat_id" required>
+                {{#each sidesCategories as |side|}}
+                <option value="{{side.id}}">{{side.title}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button class="btn btn-danger" type="submit">Add New Side</button>
+    </form>
+    <br>
+    <br>
+    {{> userBack}}
+</div>
+<script src="/js/add-side.js"></script>
