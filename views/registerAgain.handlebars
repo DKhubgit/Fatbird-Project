@@ -1,0 +1,25 @@
+<div class="container mt-5 mb-5 d-flex flex-column align-items-center">
+    <h1 class="display-1" id="register-header">Register</h1>
+    <h4 class="text-danger mb-3">Unsuccessful registration. Please try again.</h4>
+    <form action="/admin/registerAgain" method="POST">
+        <div class="mb-3">
+            <label for="InputEmail2" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="InputPassword2" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
+            <div id="passwordHelpBlock" class="form-text">
+                Your password must be 8-14 characters long, contain letters, numbers, and special characters.
+            </div>
+            <div id="passwordHelpBlock" class="form-text">
+                Must not contain spaces or emoji.
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<div class="mx-auto" style="width: 250px;">
+  <a href="/admin/login" style="font-size: 35px;">Back to login!</a>
+</div>

@@ -11,12 +11,12 @@ router.get('/loginAgain', (req,res) => {
     res.render('logAgain');
 })
 
-router.get('/home', (req,res) => {
-    res.render('homepage');
+router.get('/user', (req,res) => {
+    res.render('user');
 })
 
 router.post('/login', passport.authenticate('local', {
-    successRedirect: '/admin/home',
+    successRedirect: '/user',
     failureRedirect: '/admin/loginAgain',
 }))
 
@@ -37,6 +37,10 @@ router.get('/register', (req,res) => {
     res.render('register');
 })
 
+router.get('/registerAgain', (req,res) => {
+    res.render('registerAgain');
+})
+
 //works
 router.post('/register', async (req,res) => {
     try {
@@ -47,6 +51,7 @@ router.post('/register', async (req,res) => {
         res.status(200).redirect('/admin/login')
     } catch (err) {
         //double check correct status code
+        res.redirect('/registerAgain')
         res.status(404).json(err)
     }
 })
