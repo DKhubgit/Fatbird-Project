@@ -143,9 +143,9 @@ router.get('/user/createCategory', async (req, res) => {
 router.get('/user/updateCategoryList', async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll();
-        const sidesCategories = dbSideCategoryData.map((category) => 
+        const sidesCategories = dbSideCategoryData.map((category) =>
             category.get({ plain: true })
-        );   
+        );
         res.render('updateCategoryList', { sidesCategories });
     } catch (err) {
         res.status(500).json(err);
@@ -154,14 +154,27 @@ router.get('/user/updateCategoryList', async (req, res) => {
 
 // render update a side category
 router.get('/user/updateCategory/:id', async (req, res) => {
-    res.render('updateCategory');
+    try {
+        const dbSideCategoryData = await SidesCategory.findByPk(req.params.id)
+
+        if (!dbSideCategoryData) {
+            res.status(404).json({ message: "No such category with that ID!" });
+        }
+
+        const sideCategory = dbSideCategoryData.get({ plain: true })
+
+        res.render('updateCategory', { sideCategory });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 // render delete side category list
 router.get('/user/deleteCategoryList', async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll();
-        const sidesCategories = dbSideCategoryData.map((category) => 
+        const sidesCategories = dbSideCategoryData.map((category) =>
             category.get({ plain: true })
         );
         res.render('deleteCategoryList', { sidesCategories });
@@ -185,7 +198,7 @@ router.get('/user/createSauce', async (req, res) => {
 router.get('/user/updateSauceList', async (req, res) => {
     try {
         const dbSauceData = await Sauce.findAll();
-        const sauces = dbSauceData.map((sauce) => 
+        const sauces = dbSauceData.map((sauce) =>
             sauce.get({ plain: true })
         );
         res.render('updateSauceList', { sauces });
@@ -196,7 +209,20 @@ router.get('/user/updateSauceList', async (req, res) => {
 
 // render update a sauce
 router.get('/user/updateSauce/:id', async (req, res) => {
-    res.render('updateSauce');
+    try {
+        const dbSauceData = await Sauce.findByPk(req.params.id)
+
+        if (!dbSauceData) {
+            res.status(404).json({ message: "No such category with that ID!" });
+        }
+
+        const sauce = dbSauceData.get({ plain: true })
+
+        res.render('updateSauce', { sauce });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 // render delete sauce list
@@ -219,7 +245,17 @@ router.get('/user/deleteSauce/:id', async (req, res) => {
 
 // render create a side
 router.get('/user/createSide', async (req, res) => {
-    res.render('createSide');
+    try {
+        const dbSideCategoryData = await SidesCategory.findAll();
+        const sidesCategories = dbSideCategoryData.map((category) =>
+            category.get({ plain: true })
+        );
+
+        res.render('createSide', { sidesCategories });
+    }
+    catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 // render update side list
@@ -227,7 +263,7 @@ router.get('/user/updateSideList', async (req, res) => {
     try {
         const dbSideData = await Sides.findAll();
 
-        const side = dbSideData.map((sides) => 
+        const side = dbSideData.map((sides) =>
             sides.get({ plain: true })
         );
         res.render('updateSideList', { side });
@@ -238,7 +274,25 @@ router.get('/user/updateSideList', async (req, res) => {
 
 // render update a side
 router.get('/user/updateSide/:id', async (req, res) => {
-    res.render('updateSide');
+    try {
+        const dbSideData = await Sides.findByPk(req.params.id)
+
+        if (!dbSideData) {
+            res.status(404).json({ message: "No such category with that ID!" });
+        }
+
+        const dbSideCategoryData = await SidesCategory.findAll();
+        const sidesCategories = dbSideCategoryData.map((category) =>
+            category.get({ plain: true })
+        );
+
+        const side = dbSideData.get({ plain: true })
+
+        res.render('updateSide', { side, sidesCategories });
+
+    } catch (err) {
+        res.status(500).json(err);
+    }
 })
 
 // render delete side list
@@ -246,7 +300,7 @@ router.get('/user/deleteSideList', async (req, res) => {
     try {
         const dbSideData = await Sides.findAll();
 
-        const side = dbSideData.map((sides) => 
+        const side = dbSideData.map((sides) =>
             sides.get({ plain: true })
         );
         res.render('deleteSideList', { side });

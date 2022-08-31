@@ -7,8 +7,15 @@
     text-align: center;
     padding-top: 2%;
     padding-bottom: 2%;
-    margin-top: 1%;
     font-size: 75%;
     font-weight: bold;
     color: white;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    #footer-container {
+        padding-top: 5%;
+        padding-bottom: 5%
+    }
 }

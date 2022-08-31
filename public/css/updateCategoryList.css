@@ -1,0 +1,29 @@
+#update-category-list-container {
+    height: 100vh;
+    padding-top: 10%;
+    padding-left: 25%;
+    padding-right: 25%;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+#categ-update-title {
+    font-size: 150%;
+}
+
+.categ-title-container {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.categ-update-link {
+    font-size: 150%;
+    color: red;
+}
+
+.categ-update-link:hover {
+    color: black;
+    text-decoration: red underline;
+}

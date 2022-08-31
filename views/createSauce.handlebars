@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/create-sauce.css">
+<div class="create-sauce-container mx-auto">
+    <form id="add-sauce-form">
+        <div class="form-group">
+            <label for="sauceName" class="sauce-question">What is the Name of the Sauce?</label>
+            <input type="text" class="form-control" id="sauceName" required>
+        </div>
+        <div class="form-group">
+            <label for="sauceDescription" class="sauce-question">Please Give a Short Description</label>
+            <input type="text" class="form-control" id="sauceDescription" required>
+        </div>
+        <div class="form-group">
+            <label for="spicy_level" class="sauce-question">What is the Spice Level? (optional)</label>
+            <select id="spicy_level" class="form-control">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <button class="btn btn-danger" type="submit">Add Sauce</button>
+    </form>
+    <br>
+    <br>
+    {{> userBack}}
+</div>
+<script src="/js/add-sauce.js"></script>

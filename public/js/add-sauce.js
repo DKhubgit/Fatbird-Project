@@ -1,7 +1,7 @@
 async function newFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('#title').value;
-    const description = document.querySelector('#description').value;
+    const title = document.querySelector('#sauceName').value;
+    const description = document.querySelector('#sauceDescription').value;
     const spicy_level = document.querySelector('#spicy_level').value;
 
     const response = await fetch(`/api/menu/sauce`, {
@@ -23,4 +23,4 @@ async function newFormHandler(event) {
     }
 }
 
-document.querySelector('.add-sauce-form').addEventListener('submit', newFormHandler);
+document.querySelector('#add-sauce-form').addEventListener('submit', newFormHandler);
