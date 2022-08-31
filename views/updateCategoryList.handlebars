@@ -2,9 +2,9 @@
 <div id="update-category-list-container" class="container-fluid mx-auto">
     <h2 id="categ-update-title">Which Category Would You Like to Rename?</h2>
     <div class="dropdown show pt-5">
-        <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Select A Sauce to Update
+        <a class="btn btn-danger dropdown-toggle" href="#" role="button" id="update-categ-dropdownMenuLink"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select A Category to Update
         </a>
         <div class="dropdown-menu">
             {{#each sidesCategories as |sideCategory|}}
@@ -14,8 +14,6 @@
             {{/each}}
         </div>
     </div>
-
-
     <br>
     <br>
     {{> userBack}}

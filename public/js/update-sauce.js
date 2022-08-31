@@ -5,7 +5,7 @@ async function newFormHandler(event) {
     const spicy_level = document.querySelector('#update-spicy-level').value;
     let id = document.querySelector('#update-sauce-title').dataset.id;
 
-    const response = await fetch(`/api/menu/sauce/:id`, {
+    const response = await fetch(`/api/menu/sauce/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             id,
