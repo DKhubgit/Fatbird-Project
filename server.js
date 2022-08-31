@@ -5,8 +5,8 @@ const exphbs = require('express-handlebars');
 const session = require('express-session');
 const routes = require('./controller');
 const passport = require('passport');
-const sequelize = require('./config/config');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sequelize = require('./config/config');
 require('dotenv').config();
 
 const app = express();
@@ -23,6 +23,8 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+//passport and session
 let myStore = new SequelizeStore({
     db: sequelize,
 });
@@ -33,6 +35,7 @@ app.use(session({
     store: myStore,
 }));
 
+myStore.sync(); //creates the session table if it does not exist
 app.use(passport.initialize())
 app.use(passport.session());
 
