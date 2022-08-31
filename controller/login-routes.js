@@ -1,10 +1,6 @@
 const router = require('express').Router();
-
-//libraries for authenticating using Passport.js (will need to move this in the future for modularity).
-const passport = require('passport');
-const LocalStrategy = require('passport-local');
-const bcrypt = require('bcrypt');
 const { User } = require('../model/User');
+const passport = require("../config/passport")
 
 //works
 router.get('/login', (req,res) => {
@@ -20,10 +16,6 @@ router.post('/login', passport.authenticate('local', {
     failureRedirect: '/admin/login',
 }))
 
-//works
-router.get('/register', (req,res) => {
-    res.render('register');
-})
 router.get('/logout', (req,res) => {
     res.render('logout');
 })
@@ -37,12 +29,15 @@ router.post('/logout', (req,res) => {
     res.redirect("/");
 })
 
+router.get('/register', (req,res) => {
+    res.render('register');
+})
+
 //works
 router.post('/register', async (req,res) => {
     try {
         const email = req.body.email;
         const password = req.body.password;
-        console.log(req.body.email)
         const user = { username: email, password: password, is_admin: true};
         const newUser = await User.create(user)
         res.status(200).redirect('/admin/login')
@@ -51,30 +46,5 @@ router.post('/register', async (req,res) => {
         res.status(404).json(err)
     }
 })
-
-//maybe change message so it's not too 'hinting'
-passport.use(new LocalStrategy( {usernameField: 'email'}, async (email, password, callback) => {
-    const user = await User.findAll({ where: {username: email}, raw: true})
-    if (!user) {
-        return callback(null, false, {message: "unsuccessful user"})
-    }
-
-    const verifyPass = await bcrypt.compare(password, user[0].password)
-    
-    if (verifyPass) {
-        return callback(null, user);
-    } else {
-        return callback(null, false, {message: "unsuccessful verification"})
-    }
-
-}))
-
-passport.serializeUser(function(user, callback) {
-    callback(null, user);
-});
-  
-passport.deserializeUser(function(user, callback) {
-    callback(null, user);
-});
 
 module.exports = router;
