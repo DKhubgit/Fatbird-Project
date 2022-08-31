@@ -7,13 +7,17 @@ router.get('/login', (req,res) => {
     res.render('login');
 });
 
+router.get('/loginAgain', (req,res) => {
+    res.render('logAgain');
+})
+
 router.get('/home', (req,res) => {
     res.render('homepage');
 })
 
 router.post('/login', passport.authenticate('local', {
     successRedirect: '/admin/home',
-    failureRedirect: '/admin/login',
+    failureRedirect: '/admin/loginAgain',
 }))
 
 router.get('/logout', (req,res) => {

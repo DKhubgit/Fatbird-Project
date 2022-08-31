@@ -5,7 +5,7 @@ const { User } = require('../model/User')
 
 passport.use(new LocalStrategy( {usernameField: 'email'}, async (email, password, callback) => {
     const user = await User.findAll({ where: {username: email}, raw: true})
-    if (!user) {
+    if (user.length === 0) {
         return callback(null, false)
     }
 
