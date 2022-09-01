@@ -53,3 +53,21 @@
     color: red;
     text-decoration: black underline;
 }
+
+#logout-area {
+    padding-top: 2%;
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+}
+
+#logout-area a {
+    color: red;
+    text-decoration: black underline;
+
+}
+
+#logout-area a:hover {
+    color: black;
+    text-decoration: red underline;
+}
