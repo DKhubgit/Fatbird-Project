@@ -64,4 +64,8 @@
     .nav-link {
         font-size: 100%;
     }
+
+    #brand-title {
+        display: none;
+    }
 }
