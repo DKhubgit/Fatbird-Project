@@ -88,4 +88,6 @@ Email: dcontrer98@gmail.com
 Github: [DKhubgit](https://github.com/DKhubgit)
 
 Email: danielkang13@gmail.com
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)]
+<br/>
+(https://opensource.org/licenses/MIT)
