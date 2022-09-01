@@ -82,7 +82,11 @@ Our full stack website utilizes the following technologies:
 ### For example, The Following image is an update operation for Sauces:
 ![](/public/images/admin_operation_demo.PNG) <br />
 ## Test
-tests <br/>
+- Make sure to have installed everything from [Installation](#installation)
+- If you want to run all test then in the terminal type ```npm test```
+- If you want to just run the tests for checking the handlebars, in the terminal type ```npm test handlebar.test.js```
+- If you want to just run the tests for the routes and their functionality, in the terminal type ```npm test route.test.js``` <br/>
+
 
 ## Questions? 
 Reach us at the following with your questions: <br/>
