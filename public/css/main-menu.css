@@ -10,3 +10,11 @@
     object-fit: contain !important;
     object-position: 50% 50% !important;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 25% !important;
+    top: 37.5% !important;
+}
+
+;
