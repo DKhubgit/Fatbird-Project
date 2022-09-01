@@ -29,7 +29,7 @@ const sauces = [
     },
     {
         title: 'Mango Habanero',
-        description: 'Sweet mangoes. Fiery habeneros!',
+        description: 'Sweet mangoes. Fiery habaneros!',
         spicy_level: 2,
     },
     {

@@ -94,7 +94,7 @@ const sidesData = [
         cat_id: 5,
     },
     {
-        title: 'Fat Stickers',
+        title: 'Pot Stickers',
         cat_id: 5,
     },
     {
