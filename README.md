@@ -41,6 +41,11 @@ source schema.sql
 ```
 node seeds/index,js
 ```
+### Creating an Account
+9. To create an account, we must enter the secret key into our ```.env``` file under ```OWNER_REGISTER_KEY```. 
+10. Once we add the admin key onto our ```.env``` file, we can then go to the [Login](https://fat-birds-wing-bar.herokuapp.com/login) route to create an account with our secret key.
+11. Click on the register button, to register a new account with your email and password, then enter the key in the form field specified ```Key```.
+
 ## Technologies
 Our full stack website utilizes the following technologies:
 * [Expess Handlebars](https://www.npmjs.com/package/express-handlebars)
@@ -61,12 +66,20 @@ Our full stack website utilizes the following technologies:
 <br/>
 
 ## Screenshots
+### Website
 ![](/public/images/screenshot_main.PNG) <br/>
 ![](/public/images/screenshot_menu_chicken.PNG) <br >
 ![](/public/images/screenshot_about.PNG) <br >
 ![](/public/images/screenshot_contact.PNG) <br >
 ![](/public/images/screenshot_mobile.PNG) <br >
 
+### Admin Side
+![](/public/images/admin_login_page.PNG) <br/>
+![](/public/images/admin_user_page.PNG) <br/>
+### Each Admin Operation has the following options to choose from:
+![](/public/images/admin_operations.PNG) <br />
+### For example, The Following image is an update operation for Sauces:
+![](/public/images/admin_operation_demo.PNG) <br />
 ## Test
 tests <br/>
 
