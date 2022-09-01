@@ -90,8 +90,15 @@
 
     /* positioning for /menu */
     #wing-info-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wing-type {
+        font-size: 200%;
+    }
+
+    .wing-info-description {
+        display: none;
     }
 
     .wing-size-container {

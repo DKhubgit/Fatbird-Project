@@ -93,6 +93,10 @@
         padding-top: 4%;
     }
 
+    #address-text {
+        display: none;
+    }
+
 
     #location-map {
         height: 300px;

@@ -1,7 +1,7 @@
 /* STYLES FOR SIDES CATEGORY PAGE */
 #sides-container {
     height: 100vh;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
 
 #sides-category-header {
@@ -110,11 +110,16 @@
         display: none;
     }
 
+    #side-select-text {
+        display: none;
+    }
+
     /* positioning for sides */
     #sides-container {
         padding-top: 15%;
         padding-bottom: 30%;
     }
+
 
     #sides-category-wrapper {
         grid-template-columns: 1fr;
@@ -124,8 +129,12 @@
 
     .side-item-title {
         padding-top: 1%;
-        font-size: 175%;
+        font-size: 120%;
         line-height: 1.75em;
+    }
+
+    #side-container {
+        overflow: scroll;
     }
 
 }
