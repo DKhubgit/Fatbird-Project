@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Sauce } = require('../model/Sauce');
 const { SidesCategory, Sides } = require('../model');
+const check = require('../utils/auth');
 
 // Render the homepage
 router.get('/', async (req, res) => {
@@ -125,22 +126,22 @@ router.get('/contact', async (req, res) => {
 
 // render login page
 // not final route
-router.get('/login', async (req, res) => {
+router.get('/login', check.checkAuth, async (req, res) => {
     res.render('login');
 })
 
 // render user homepage
-router.get('/user', async (req, res) => {
+router.get('/user', check.isAuth, async (req, res) => {
     res.render('user');
 })
 
 // render create side category
-router.get('/user/createCategory', async (req, res) => {
+router.get('/user/createCategory', check.isAuth, async (req, res) => {
     res.render('createCategory');
 })
 
 // render update side category list
-router.get('/user/updateCategoryList', async (req, res) => {
+router.get('/user/updateCategoryList', check.isAuth, async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll();
         const sidesCategories = dbSideCategoryData.map((category) =>
@@ -153,7 +154,7 @@ router.get('/user/updateCategoryList', async (req, res) => {
 })
 
 // render update a side category
-router.get('/user/updateCategory/:id', async (req, res) => {
+router.get('/user/updateCategory/:id', check.isAuth, async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findByPk(req.params.id)
 
@@ -171,7 +172,7 @@ router.get('/user/updateCategory/:id', async (req, res) => {
 })
 
 // render delete side category list
-router.get('/user/deleteCategoryList', async (req, res) => {
+router.get('/user/deleteCategoryList', check.isAuth, async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll();
         const sidesCategories = dbSideCategoryData.map((category) =>
@@ -185,17 +186,17 @@ router.get('/user/deleteCategoryList', async (req, res) => {
 })
 
 // render delete a side category
-router.get('/user/deleteCategory/:id', async (req, res) => {
+router.get('/user/deleteCategory/:id', check.isAuth, async (req, res) => {
     res.render('deleteCategory');
 })
 
 // render create a sauce 
-router.get('/user/createSauce', async (req, res) => {
+router.get('/user/createSauce', check.isAuth, async (req, res) => {
     res.render('createSauce');
 })
 
 // render update sauce list
-router.get('/user/updateSauceList', async (req, res) => {
+router.get('/user/updateSauceList', check.isAuth, async (req, res) => {
     try {
         const dbSauceData = await Sauce.findAll();
         const sauces = dbSauceData.map((sauce) =>
@@ -208,7 +209,7 @@ router.get('/user/updateSauceList', async (req, res) => {
 })
 
 // render update a sauce
-router.get('/user/updateSauce/:id', async (req, res) => {
+router.get('/user/updateSauce/:id', check.isAuth, async (req, res) => {
     try {
         const dbSauceData = await Sauce.findByPk(req.params.id)
 
@@ -226,7 +227,7 @@ router.get('/user/updateSauce/:id', async (req, res) => {
 })
 
 // render delete sauce list
-router.get('/user/deleteSauceList', async (req, res) => {
+router.get('/user/deleteSauceList', check.isAuth, async (req, res) => {
     try {
         const dbSauceData = await Sauce.findAll();
         const sauces = dbSauceData.map((sauce) =>
@@ -239,12 +240,12 @@ router.get('/user/deleteSauceList', async (req, res) => {
 })
 
 // render delete a sauce
-router.get('/user/deleteSauce/:id', async (req, res) => {
+router.get('/user/deleteSauce/:id', check.isAuth, async (req, res) => {
     res.render('deleteSauce');
 })
 
 // render create a side
-router.get('/user/createSide', async (req, res) => {
+router.get('/user/createSide', check.isAuth, async (req, res) => {
     try {
         const dbSideCategoryData = await SidesCategory.findAll();
         const sidesCategories = dbSideCategoryData.map((category) =>
@@ -259,7 +260,7 @@ router.get('/user/createSide', async (req, res) => {
 })
 
 // render update side list
-router.get('/user/updateSideList', async (req, res) => {
+router.get('/user/updateSideList', check.isAuth, async (req, res) => {
     try {
         const dbSideData = await Sides.findAll();
 
@@ -273,7 +274,7 @@ router.get('/user/updateSideList', async (req, res) => {
 })
 
 // render update a side
-router.get('/user/updateSide/:id', async (req, res) => {
+router.get('/user/updateSide/:id', check.isAuth, async (req, res) => {
     try {
         const dbSideData = await Sides.findByPk(req.params.id)
 
@@ -296,7 +297,7 @@ router.get('/user/updateSide/:id', async (req, res) => {
 })
 
 // render delete side list
-router.get('/user/deleteSideList', async (req, res) => {
+router.get('/user/deleteSideList', check.isAuth, async (req, res) => {
     try {
         const dbSideData = await Sides.findAll();
 
@@ -310,7 +311,7 @@ router.get('/user/deleteSideList', async (req, res) => {
 })
 
 // render delete a side
-router.get('/user/deleteSide', async (req, res) => {
+router.get('/user/deleteSide', check.isAuth, async (req, res) => {
     res.render('deleteSide');
 })
 

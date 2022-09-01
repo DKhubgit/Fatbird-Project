@@ -1,18 +1,15 @@
 const router = require('express').Router();
 const { User } = require('../model/User');
 const passport = require("../config/passport");
+const check = require('../utils/auth')
 require('dotenv').config();
 
-router.get('/login', (req,res) => {
+router.get('/login', check.checkAuth, (req,res) => {
     res.render('login');
 });
 
-router.get('/loginAgain', (req,res) => {
+router.get('/loginAgain', check.checkAuth, (req,res) => {
     res.render('logAgain');
-})
-
-router.get('/user', (req,res) => {
-    res.render('user');
 })
 
 router.post('/login', passport.authenticate('local', {
@@ -25,7 +22,7 @@ router.post('/loginAgain', passport.authenticate('local', {
     failureRedirect: '/admin/loginAgain',
 }))
 
-router.get('/logout', (req,res) => {
+router.get('/logout', check.isAuth, (req,res) => {
     res.render('logout');
 })
 
@@ -38,11 +35,11 @@ router.post('/logout', (req,res) => {
     res.redirect("/");
 })
 
-router.get('/register', (req,res) => {
+router.get('/register', check.checkAuth, (req,res) => {
     res.render('register');
 })
 
-router.get('/registerAgain', (req,res) => {
+router.get('/registerAgain', check.checkAuth, (req,res) => {
     res.render('registerAgain');
 })
 
