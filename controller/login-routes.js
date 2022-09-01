@@ -3,7 +3,6 @@ const { User } = require('../model/User');
 const passport = require("../config/passport");
 require('dotenv').config();
 
-//works
 router.get('/login', (req,res) => {
     res.render('login');
 });
@@ -17,6 +16,11 @@ router.get('/user', (req,res) => {
 })
 
 router.post('/login', passport.authenticate('local', {
+    successRedirect: '/user',
+    failureRedirect: '/admin/loginAgain',
+}))
+
+router.post('/loginAgain', passport.authenticate('local', {
     successRedirect: '/user',
     failureRedirect: '/admin/loginAgain',
 }))
@@ -42,8 +46,24 @@ router.get('/registerAgain', (req,res) => {
     res.render('registerAgain');
 })
 
-//works
+
 router.post('/register', async (req,res) => {
+    try {
+        const email = req.body.email;
+        const password = req.body.password;
+        const user = { username: email, password: password, is_admin: true};
+        if (req.body.key === process.env.OWNER_REGISTER_KEY) {
+            await User.create(user);
+            res.status(200).redirect('/admin/login');
+        } else {
+            res.status(401).redirect('/admin/registerAgain')
+        }
+    } catch (err) {
+        res.status(401).redirect('/admin/registerAgain');
+    }
+})
+
+router.post('/registerAgain', async (req,res) => {
     try {
         const email = req.body.email;
         const password = req.body.password;
