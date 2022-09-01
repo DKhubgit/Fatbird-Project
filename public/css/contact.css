@@ -8,6 +8,7 @@
     padding-bottom: 2%;
     margin-bottom: 5%;
     text-align: center;
+    overflow: scroll;
 }
 
 #address-container {
@@ -86,7 +87,7 @@
             "c c c c";
         padding-bottom: 5%;
         text-align: center;
-        overflow: hidden;
+        overflow: scroll;
     }
 
     .info-container {
