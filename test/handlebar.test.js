@@ -71,11 +71,11 @@ describe('Route about me', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-    `<link rel="stylesheet" href="/css/about.css">
-<div class="container-fluid" id="about-container">
-    <div id="history-container" class="about-sub-container">
-        <h2 class="about-title">Our History</h2>
-        <p class="about-text">Founded in 2020, Fat Birds Wing Bar strives to bring a fresh take on wings to Midland TX.
+    `<link rel=\"stylesheet\" href=\"/css/about.css\">
+<div class=\"container-fluid\" id=\"about-container\">
+    <div id=\"history-container\" class=\"about-sub-container\">
+        <h2 class=\"about-title\">Our History</h2>
+        <p class=\"about-text\">Founded in 2020, Fat Birds Wing Bar strives to bring a fresh take on wings to Midland TX.
             Our food is made to order so
             the wings are hot and juicy and never sit around in a warmer. We also make all our sauces and dips fresh in
             house using
@@ -88,33 +88,7 @@ describe('Route about me', () => {
             Thank you and come see us soon!
         </p>
     </div>
-    <div class="container-fluid" id="home-socials">
-        <h5 id="socials-title">Follow Us!</h5>
-        <ul id="home-social-media-list">
-            <li class="social-li">
-                <a class="social-link" href="https://www.yelp.com/biz/fat-birds-wing-bar-midland">
-                    <i class="fa-brands fa-yelp"></i>
-                </a>
-            </li>
-            <li class="social-li">
-                <a class="social-link" href="https://www.facebook.com/people/Fat-Birds-Wing-Bar/100064282713069/">
-                    <i class="fa-brands fa-square-facebook"></i>
-                </a>
-            </li>
-            <li class="social-li"><a class="social-link" href="https://www.instagram.com/fatbirdswingbar/?hl=en">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </li>
-        </ul>
-    </div></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script>
-    anime({
-        targets: ['#history-container'],
-        translateY: 300,
-    })
-</script>`
+</div>`
         )
     })
 });
@@ -125,70 +99,48 @@ describe('Route menu', () => {
         expect(res.statusCode).toBe(200);
         expect(res.header['content-type']).toBe('text/html; charset=utf-8');
         expect(res.text).toContain(
-    `<link rel="stylesheet" href="/css/main-menu.css">
-<div class="container-fluid" id="main-menu-container">
-    <div id="sizes-container">
-        <h1 class="menu-title" id="main-menu-title">SIZES</h1>
-        <h3 class="main-menu-header">
-            Our chicken is made fresh in house, using real
-            ingredients and real cooking techniques. <br>
-        </h3>
-        <div id="wing-info-container">
-            <div class="wing-size-container">
-                <h2 class="wing-type">6 Wings</h2>
-                <p class="wing-info-description">
-                    Choice Of:
-                <ul class="wing-info-ul">
-                    <li>- 1 Sauce</li>
-                    <li>- 1 Dip</li>
-                </ul>
-                </p>
+    `<link rel=\"stylesheet\" href=\"/css/main-menu.css\">
+<div id=\"main-menu-container\">
+    <div id=\"carousel-photos\" class=\"carousel slide\" data-ride=\"carousel\">
+        <div class=\"carousel-inner\">
+            <div class=\"carousel-item active\">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image0.jpeg\">
             </div>
-            <div class="wing-size-container">
-                <h2 class="wing-type">8 Wings</h2>
-                <p class="wing-info-description">
-                    Choice Of:
-                <ul class="wing-info-ul">
-                    <li>- 2 Sauces</li>
-                    <li>- 1 Dip</li>
-                </ul>
-                </p>
+            <div class=\"carousel-item \">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image1.jpeg\">
             </div>
-            <div class="wing-size-container">
-                <h2 class="wing-type">12 Wings</h2>
-                <p class="wing-info-description">
-                    Choice Of:
-                <ul class="wing-info-ul">
-                    <li>- 3 Sauces</li>
-                    <li>- 2 Dips</li>
-                </ul>
-                </p>
+            <div class=\"carousel-item \">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image2.jpeg\">
             </div>
-            <div class="wing-size-container">
-                <h2 class="wing-type">Tenders</h2>
-                <p class="wing-info-description">
-                    Sizes:
-                <ul class="wing-info-ul">
-                    <li>- 3 pieces</li>
-                    <li>- 5 pieces</li>
-                    <li>- 9 pieces</li>
-                </ul>
-                </p>
+            <div class=\"carousel-item \">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image3.jpeg\">
+            </div>
+            <div class=\"carousel-item \">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image4.jpeg\">
+            </div>
+            <div class=\"carousel-item \">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image5.jpeg\">
+            </div>
+            <div class=\"carousel-item \">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image6.jpeg\">
+            </div>
+            <div class=\"carousel-item \">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image7.jpeg\">
+            </div>
+            <div class=\"carousel-item \">
+                <img class=\"d-block w-100 h-50 car-img\" src=\"/images/image10.jpeg\">
             </div>
         </div>
-
     </div>
-</div>
-<h4 class="main-menu-header">
-    Food allergy or dietary concerns? Please let us know before ordering.
-</h4>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script>
-    anime({
-        targets: ['.wing-size-container'],
-        translateY: 200
-    });
-</script>`
+    <a class=\"carousel-control-prev\" href=\"#carousel-photos\" role=\"button\" data-slide=\"prev\">
+        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+        <span class=\"sr-only\">Previous</span>
+    </a>
+    <a class=\"carousel-control-next\" href=\"#carousel-photos\" role=\"button\" data-slide=\"next\">
+        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+        <span class=\"sr-only\">Next</span>
+    </a>
+</div>`
         )
     })
 });
@@ -407,7 +359,7 @@ describe('Render sidesCategories', () => {
     anime({
         targets: '.sides-category-container',
         translateX: 400,
-        delay: anime.stagger(200, { start: 350 })
+        delay: anime.stagger(200, { start: 200 })
     });
     anime({
         targets: '.category-title',
@@ -581,41 +533,21 @@ describe('Render contact', () => {
             📞: <a class="contact-link" href="tel:(432) 218-7390">(432)-218-7390 <br></a>
             <br>
             📧: <a class="contact-link" href="mailto:FatBirdMidland@gmail.com">FatBirdMidland@gmail.com <br></a>
-            <br>
-            <i class="fa-brands fa-yelp"></i> : <a class="contact-link"
-                href="https://www.yelp.com/biz/fat-birds-wing-bar-midland"> Yelp Page
-                <br></a>
-            <br>
-            <i class="fa-brands fa-square-facebook"></i> : <a class="contact-link"
-                href="https://www.facebook.com/people/Fat-Birds-Wing-Bar/100064282713069/">Facebook
-                Page
-                <br></a>
-            <br>
-            <i class="fa-brands fa-instagram"></i> : <a class="contact-link"
-                href="https://www.instagram.com/fatbirdswingbar/?hl=en">Instagram
-                <br></a>
 
         </p>
     </div>
     <div class="container info-container" id="business-hours-container">
         <h3 class="info-title" id="business-hours-title">Business Hours</h3>
         <p id="business-hours-text" class="info-text">
-            Mon: Closed <br>
+            Mon: Closed
             <br>
-            Tue: 11:00 AM - 9:00 PM <br>
             <br>
-            Wed: 11:00 AM - 9:00 PM <br>
+            Sun-Thurs: 11:00 AM - 9:00 PM
             <br>
-            Thu: 11:00 AM - 9:00 PM <br>
             <br>
-            Fri: 11:00 AM - 10:00 PM <br>
+            Fri-Sat: 11:00 AM - 10:00 PM
             <br>
-            Sat: 11:00 AM - 10:00 PM <br>
-            <br>
-            Sun: 11:00 AM - 9:00 PM <br>
         </p>
-        <br>
-        <br>
     </div>
 </div>
 <div class="container-fluid" id="home-socials">
@@ -636,7 +568,9 @@ describe('Render contact', () => {
             </a>
         </li>
     </ul>
-</div><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</div><br>
+<br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <script src="https://kit.fontawesome.com/22e6b9b0f7.js" crossorigin="anonymous"></script>
 <script>
     anime({
