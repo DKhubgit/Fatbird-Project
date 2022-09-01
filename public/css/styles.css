@@ -44,7 +44,7 @@ body {
 /* SOCIAL MEDIA LINKS PARTIALS*/
 #home-socials {
     padding-top: 2%;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
 }
 
 #socials-title {
@@ -58,7 +58,7 @@ body {
 }
 
 #home-social-media-list {
-    font-size: 375%;
+    font-size: 300%;
     text-align: center;
 }
 
@@ -130,6 +130,10 @@ body {
 @media screen and (min-width: 200px) and (max-width: 800px) {
     .menu-title {
         margin-bottom: 4%;
+    }
+
+    #socials-title {
+        font-size: 250%;
     }
 }
 

@@ -8,7 +8,7 @@
     padding-bottom: 2%;
     margin-bottom: 5%;
     text-align: center;
-
+    height: 100vh;
 }
 
 #address-container {
@@ -93,6 +93,15 @@
     .info-container {
         padding-top: 4%;
     }
+
+    .info-title {
+        font-size: 150%;
+    }
+
+    .info-text {
+        font-size: 100%;
+    }
+
 
     #address-text {
         display: none;
