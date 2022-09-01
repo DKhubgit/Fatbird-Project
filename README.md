@@ -45,6 +45,7 @@ node seeds/index,js
 9. To create an account, we must enter the secret key into our ```.env``` file under ```OWNER_REGISTER_KEY```. 
 10. Once we add the admin key onto our ```.env``` file, we can then go to the [Login](https://fat-birds-wing-bar.herokuapp.com/login) route to create an account with our secret key.
 11. Click on the register button, to register a new account with your email and password, then enter the key in the form field specified ```Key```.
+12. If successful, we will be directed to the login page, where we can simply input our login information to access the admin side website. 
 
 ## Technologies
 Our full stack website utilizes the following technologies:
