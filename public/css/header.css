@@ -1,0 +1,71 @@
+/* Header styles */
+.navbar-brand {
+    position: relative !important;
+    left: 1% !important;
+}
+
+.navbar {
+    background-color: var(--red-theme);
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bolder !important;
+    font-size: 130%;
+}
+
+.nav-link:hover {
+    color: black !important;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+    font-size: 120%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#brand-title {
+    display: inline;
+    color: White;
+    font-weight: bold;
+    position: relative;
+    top: 20px;
+    left: 15px;
+    font-size: 150%;
+    text-align: center;
+}
+
+.navbar-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+/* Styles for dropdown menu on nav bar */
+.dropdown-item {
+    font-weight: bold;
+    color: red;
+    border: none;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    color: black;
+}
+
+.display-1 {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    padding-bottom: 5%;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    .nav-link {
+        font-size: 100%;
+    }
+
+    #brand-title {
+        display: none;
+    }
+}

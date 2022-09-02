@@ -1,0 +1,80 @@
+/* HOMEPAGE STYLES */
+.jumbotron {
+    background-color: white;
+    padding-bottom: 0px;
+}
+
+#hero-title {
+    font-size: 600%;
+    color: black;
+    padding-top: 5%;
+    font-weight: normal;
+}
+
+#fb-span {
+    text-decoration: underline red 4px !important;
+    text-underline-offset: 40%;
+    font-weight: bolder;
+}
+
+#wb-span {
+    font-size: 45%;
+}
+
+#hero-container-desktop {
+    padding-top: 0px;
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-bottom: 0;
+}
+
+.hero-image-container {
+    width: 100%;
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#first-hero-image {
+    background-image: url('/images/image3.jpeg');
+}
+
+#second-hero-image {
+    background-image: url('/images/image2.jpeg');
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    #hero-container-desktop {
+        margin-left: -50px;
+        margin-right: -50px;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+    #hero-title {
+        font-size: 400%;
+    }
+
+    #hero-image-container {
+        background-attachment: scroll;
+    }
+
+    #first-hero-image {
+        background-attachment: scroll;
+    }
+
+    #second-hero-image {
+        background-attachment: scroll;
+        margin-bottom: -10px;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 990px) {
+    #second-hero-image {
+        margin-bottom: -10px !important;
+    }
+}

@@ -1,0 +1,170 @@
+:root {
+    --red-theme: #c1121f;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+.display-1 {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    padding-bottom: 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#side-select-text {
+    font-weight: bold;
+    font-size: 150%;
+    text-align: center;
+}
+
+/* SOCIAL MEDIA LINKS PARTIALS*/
+#home-socials {
+    padding-top: 2%;
+    margin-bottom: 6%;
+}
+
+#socials-title {
+    text-align: center;
+    font-size: 300%;
+    font-weight: bold;
+    text-decoration: underline 3.5px red !important;
+    text-underline-offset: 13%;
+    margin-bottom: 4%;
+    margin-top: 2%;
+}
+
+#home-social-media-list {
+    font-size: 300%;
+    text-align: center;
+}
+
+.social-li {
+    display: inline;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.social-link:hover {
+    text-decoration: none;
+}
+
+/* Font styles for contact */
+.fa-yelp {
+    color: red !important;
+}
+
+.fa-instagram {
+    color: brown !important;
+    font-weight: bold;
+}
+
+.fa-square-facebook {
+    color: blue !important;
+}
+
+.menu-title {
+    font-size: 450%;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    padding-bottom: 2%;
+    text-decoration: underline black 2px !important;
+    text-underline-offset: 10%;
+}
+
+/* Styling for back button in sauce */
+.backLink {
+    text-align: center;
+    position: relative;
+    bottom: 0%;
+    margin: auto;
+    font-weight: bold;
+    font-size: 150%;
+    color: red;
+    left: -500px;
+    padding-bottom: 5%;
+}
+
+.backLink:hover {
+    color: red;
+}
+
+/* Back link on /user routes */
+.userBackLink {
+    text-align: center;
+    color: black;
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.userBackLink:hover {
+    color: red;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    .menu-title {
+        margin-bottom: 4%;
+    }
+
+    #socials-title {
+        font-size: 250%;
+    }
+}
+
+/* Media Queries for Larger Screens */
+@media screen and (min-width: 1000px) {
+    #hero-title {
+        font-size: 700%;
+    }
+
+    #hero-container-desktop {
+        margin-left: -50px;
+        margin-right: -50px;
+        margin-bottom: -50px;
+    }
+
+    .menu-sizes-photo {
+        padding-top: 2%;
+        height: 300px;
+        width: 300px;
+        object-fit: scale-down;
+        margin: auto;
+    }
+
+    #hero-img {
+        width: 100%;
+        padding-left: -8%;
+        padding-right: -8%;
+    }
+
+    #location-map {
+        height: 400px;
+        width: 900px;
+    }
+}

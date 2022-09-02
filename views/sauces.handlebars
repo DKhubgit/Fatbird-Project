@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/sauces.css">
+<h2 class="menu-title" id="sauce-menu-title">SAUCES</h2>
+<h3 id="side-select-text">All sauces are made fresh in house!</h3>
+<div id="sauces-container">
+    {{#each sauces as |sauce|}}
+    <div class="sauce-container">
+        <h2 class="sauce-name"> <a class="sauce-link" href="/menu/sauces/{{sauce.id}}">{{sauce.title}}</a> </h2>
+        <p class="sauce-description">{{sauce.description}}</p>
+        {{#if sauce.spicy_level}}
+        <p class="sauce-spice-level">🌶️ Spice Level: <span class="spice-level-span">{{sauce.spicy_level}}</span></p>
+        {{/if}}
+    </div>
+    {{/each}}
+    <a href="/menu" class="backLink">View Chicken Options</a>
+</div>
+
+{{!-- Anime.js script --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+    anime({
+        targets: ['.sauce-container', '.backLink'],
+        translateX: 500
+    })
+</script>

@@ -1,0 +1,80 @@
+/* Styling for sauces menu */
+#sauces-menu-container {
+    margin-bottom: 3%;
+}
+
+#sauces-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 5%;
+}
+
+.sauce-container {
+    padding: 5%;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    left: -500px;
+}
+
+#single-sauce-container {
+    height: 100vh;
+}
+
+
+.sauce-name {
+    font-size: 250%;
+    text-decoration: underline red 2px;
+    text-underline-offset: 10%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.sauce-description {
+    line-height: 2.5rem;
+    font-size: 125%;
+}
+
+.spice-level-span {
+    color: red;
+    font-weight: bold;
+}
+
+/* Styles for sauce links */
+.sauce-link {
+    color: red;
+    text-decoration: underline black 2px !important;
+    text-underline-offset: 10%;
+}
+
+.sauce-link:hover {
+    color: black;
+    text-decoration: underline red 2px !important;
+    text-underline-offset: 10%;
+}
+
+#sauce-backlink {
+    position: relative;
+    left: 35%;
+    margin: auto;
+}
+
+@media screen and (min-width: 200px) and (max-width: 800px) {
+    #sauce-menu-title {
+        font-size: 375%;
+    }
+
+    .sauce-name {
+        font-size: 200%
+    }
+
+    /* Positioning for sauces */
+    #sauces-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow: scroll;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+}
