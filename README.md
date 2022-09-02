@@ -97,7 +97,7 @@ Email: cagatingilbert@gmail.com
 
 
 ### Diana Contreras
-Github: [contrer83](https://github.com/contrer83)
+Github: [dcontrer83](https://github.com/dcontrer83)
 
 Email: dcontrer98@gmail.com
 
